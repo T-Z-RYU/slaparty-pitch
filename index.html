@@ -2707,7 +2707,30 @@ html, body { margin: 0; padding: 0; background: #000; }
 
 </deck-stage>
 
+<style>
+.__fs-btn{position:fixed;right:16px;bottom:16px;z-index:9999;width:36px;height:36px;border:none;border-radius:8px;background:rgba(0,0,0,0.55);color:#fff;font:18px/1 system-ui,sans-serif;cursor:pointer;opacity:.45;transition:opacity .2s}
+.__fs-btn:hover{opacity:1}
+@media print{.__fs-btn{display:none!important}}
+</style>
 <script>
+// Fullscreen: press F or click the ⛶ button.
+(() => {
+  const toggle = () => {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.().catch(() => {});
+    else document.exitFullscreen?.();
+  };
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey && !e.altKey) toggle();
+  });
+  const btn = document.createElement('button');
+  btn.className = '__fs-btn';
+  btn.textContent = '⛶';
+  btn.title = 'Fullscreen (F)';
+  btn.setAttribute('aria-label', 'Toggle fullscreen');
+  btn.addEventListener('click', toggle);
+  document.body.appendChild(btn);
+})();
+
 // Auto-print once fonts + layout settle — only when ?print=1 is set,
 // so the file can also be opened for normal browsing/editing.
 if (new URLSearchParams(location.search).has('print')) {
