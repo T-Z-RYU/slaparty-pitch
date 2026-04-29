@@ -1,15 +1,18 @@
 <!DOCTYPE html><html lang="en"><head>
-
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0d0b09">
-<meta name="description" content="Slaparty — a 3D co-op slapping action game. Thesis pitch by Tielong.">
-<title>SLAPARTY — Thesis Pitch</title>
-<link rel="icon" type="image/png" href="assets/logo-slaparty.png">
+<title>SLAPARTY — Thesis Pitch v2</title>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#0d0b09"/>
+  <g transform="translate(120,120)">
+    <rect width="160" height="160" fill="#ff3d92" transform="rotate(-8 80 80)"/>
+    <text x="80" y="100" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="56" fill="#0d0b09" transform="rotate(-8 80 80)">SLAP</text>
+  </g>
+</svg>
+</template>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script src="deck-stage.js"></script>
 <style>
 :root {
@@ -94,7 +97,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .lc-mid .chap-title {
   font-family: 'Inter', sans-serif;
-  font-style: italic;
+  font-style: normal;
   font-size: 26px;
   color: var(--muted-2);
   line-height: 1.35;
@@ -195,7 +198,7 @@ html, body { margin: 0; padding: 0; background: #000; }
   right: 56px;
   text-align: right;
   font-family: 'Inter', sans-serif;
-  font-style: italic;
+  font-style: normal;
   font-size: 28px;
   color: var(--paper);
   line-height: 1.4;
@@ -253,7 +256,7 @@ html, body { margin: 0; padding: 0; background: #000; }
   line-height: 1.45;
   color: var(--paper);
   max-width: 820px;
-  font-style: italic;
+  font-style: normal;
   margin-top: 44px;
   background: rgba(10, 8, 16, 0.72);
   backdrop-filter: blur(8px);
@@ -334,6 +337,510 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .why-desc b { color: var(--slap); font-weight: 600; }
 
+/* ─── single-ref version of WHY (one big image + breathing space) ─── */
+.slide.s-why-single .s-right {
+  display: block !important;
+}
+.s-why-single .s-right .eyebrow,
+.s-why-single .s-right .slide-title {
+  display: none;
+}
+.s-why-single .why-single-grid {
+  display: contents;
+}
+.s-why-single .why-hero {
+  position: absolute;
+  left: 120px;
+  top: 140px;
+  width: 700px;
+  height: 800px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px -16px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.4);
+  background: #000;
+  z-index: 2;
+}
+.s-why-single.insult .why-hero { background: radial-gradient(circle at center, rgba(255,221,68,0.18), rgba(13,11,9,0.85)); }
+.s-why-single.theater .why-hero { background: radial-gradient(circle at center, rgba(255,138,181,0.22), rgba(13,11,9,0.85)); }
+.s-why-single .why-hero img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.s-why-single .why-hero .ref-tag {
+  position: absolute; left: 18px; bottom: 18px; z-index: 2;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--paper); opacity: 0.9;
+  background: rgba(13,11,9,0.78);
+  padding: 8px 14px; border-radius: 4px;
+  border: 1px solid var(--rule-inv-2);
+}
+.s-why-single .why-text {
+  position: absolute;
+  left: 920px;
+  top: 220px;
+  right: 120px;
+  display: flex; flex-direction: column; gap: 36px;
+  z-index: 2;
+}
+
+/* ─── collage: top-bottom — title above, clean row of references below ─── */
+.s-why-single.collage .why-text {
+  position: absolute;
+  left: 120px;
+  top: 140px;
+  right: 120px;
+  width: auto;
+  display: flex; flex-direction: column; gap: 24px;
+  z-index: 3;
+}
+.s-why-single.collage .collage-grid {
+  position: absolute;
+  left: 120px;
+  top: 480px;
+  width: 1680px;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  z-index: 2;
+}
+.s-why-single.collage .cg-cell {
+  position: relative;
+  margin: 0;
+  background: #1a1612;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 14px 32px -8px rgba(0,0,0,0.6), 0 2px 4px rgba(0,0,0,0.4);
+}
+.s-why-single.collage .cg-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.4) 100%),
+    repeating-linear-gradient(45deg, rgba(255,138,181,0.04) 0 8px, transparent 8px 16px);
+  pointer-events: none;
+  z-index: 1;
+}
+.s-why-single.collage .cg-cell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+  z-index: 3;
+}
+.s-why-single.collage .cg-cell img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+.s-why-single.collage .cg-tag {
+  position: relative;
+  z-index: 4;
+  margin: 12px;
+  padding: 5px 10px;
+  background: rgba(13,11,9,0.78);
+  color: rgba(232,226,212,0.85);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.s-why-single.collage .cg-strip {
+  position: absolute;
+  left: 120px;
+  top: 1000px;
+  width: 1680px;
+  color: rgba(232,226,212,0.4);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  z-index: 3;
+}
+
+/* ─── COOP HUMILIATION page: top headline, full-width chart below ─── */
+.s-why-single.coop-humiliation .coop-text {
+  position: absolute;
+  left: 280px;
+  top: 80px;
+  right: 80px;
+  z-index: 3;
+}
+.s-why-single.coop-humiliation .coop-headline {
+  display: none;
+}
+.s-why-single.coop-humiliation .coop-body {
+  display: none;
+}
+.s-why-single.coop-humiliation .coop-chart {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  bottom: 60px;
+  margin: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-why-single.coop-humiliation .coop-chart img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ─── MYSELF page: title up top, scrappy wall of games below ─── */
+.s-why-single.myself .myself-text {
+  position: absolute;
+  left: 120px;
+  top: 110px;
+  width: 1680px;
+  z-index: 3;
+}
+.s-why-single.myself .myself-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 132px;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--paper);
+  margin: 0 0 20px 0;
+}
+.s-why-single.myself .myself-headline .pink {
+  color: var(--slap);
+  font-style: normal;
+}
+.s-why-single.myself .myself-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.4;
+  color: rgba(232,226,212,0.78);
+  max-width: 1300px;
+  margin: 0;
+}
+.s-why-single.myself .myself-body b { color: var(--slap); font-weight: 700; }
+
+/* ────────────────────────────────────────────────────────────────
+   "I love co-op games" wall — Hero + Stack layout
+   Split Fiction big left, others gridded 4×2 right
+   ──────────────────────────────────────────────────────────────── */
+.s-why-single.myself .myself-wall {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 360px;
+  height: 600px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 480px repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px 28px;
+  align-items: stretch;
+}
+.s-why-single.myself .mw-cell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1a1612;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.s-why-single.myself .mw-tag { display: none; }
+.s-why-single.myself .mw-3 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  box-shadow: 0 28px 60px -12px rgba(0,0,0,0.85);
+}
+.s-why-single.myself .mw-1 { grid-column: 2; grid-row: 1; }
+.s-why-single.myself .mw-2 { grid-column: 3; grid-row: 1; }
+.s-why-single.myself .mw-4 { grid-column: 4; grid-row: 1; }
+.s-why-single.myself .mw-5 { grid-column: 5; grid-row: 1; }
+.s-why-single.myself .mw-6 { grid-column: 2; grid-row: 2; }
+.s-why-single.myself .mw-7 { grid-column: 3; grid-row: 2; }
+.s-why-single.myself .mw-8 { grid-column: 4 / span 2; grid-row: 2; }
+
+.s-why-single.myself .mw-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+.s-why-single.myself .mw-cell img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.s-why-single.myself .mw-tag {
+  position: absolute;
+  left: 14px; bottom: 14px;
+  z-index: 3;
+  padding: 6px 11px;
+  background: rgba(13,11,9,0.82);
+  color: rgba(232,226,212,0.92);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.s-why-single.myself .mw-cell.placeholder {
+  background:
+    repeating-linear-gradient(45deg, rgba(255,138,181,0.05) 0 14px, transparent 14px 28px),
+    #14100d;
+}
+.s-why-single.myself .mw-cell.placeholder::after {
+  content: '// drop image';
+  position: absolute;
+  left: 50%; top: 42%;
+  transform: translate(-50%, -50%);
+  color: rgba(232,226,212,0.28);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 3;
+}
+/* (legacy absolute positions removed — covers now flow horizontally via flex above) */
+
+.s-why-single.myself .myself-strip {
+  position: absolute;
+  left: 120px;
+  bottom: 60px;
+  color: rgba(232,226,212,0.4);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  z-index: 3;
+}
+
+/* ─── triptych: three real-world slap references, side-by-side ─── */
+.s-why-single .why-triptych {
+  position: absolute;
+  left: 120px;
+  top: 140px;
+  width: 760px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 4px;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px -16px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+.s-why-single .why-triptych--two {
+  grid-template-rows: 1fr 1fr;
+}
+.s-why-single .why-triptych--solo {
+  grid-template-rows: 1fr;
+}
+.s-why-single .trip-pane:nth-child(1),
+.s-why-single .trip-pane:nth-child(2),
+.s-why-single .trip-pane:nth-child(3) { /* equal weight */ }
+.s-why-single .trip-pane figcaption {
+  left: 14px; right: auto; bottom: 14px;
+  font-size: 19px;
+}
+.s-why-single .trip-pane {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #1a1612;
+}
+.s-why-single .trip-pane img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  /* shared color treatment: cool shadows + warm highlights, low saturation, slight grain via blend */
+  filter: saturate(0.55) contrast(1.08) brightness(0.92) sepia(0.12) hue-rotate(-8deg);
+}
+.s-why-single .trip-pane::before {
+  /* shared vignette */
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%),
+    /* subtle warm highlight wash */
+    linear-gradient(180deg, rgba(255,210,160,0.06), rgba(20,30,55,0.10));
+  pointer-events: none;
+  z-index: 1;
+}
+.s-why-single .trip-pane::after {
+  /* film grain — tiled noise built from layered radial gradients */
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 0.5px, transparent 0.6px),
+    radial-gradient(rgba(0,0,0,0.10) 0.5px, transparent 0.6px);
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 1px 2px;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 2;
+}
+.s-why-single .trip-pane figcaption {
+  position: absolute; left: 12px; right: 12px; bottom: 12px;
+  z-index: 3;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--paper);
+  background: rgba(13,11,9,0.78);
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--rule-inv-2);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.s-why-single .trip-placeholder .trip-placeholder-fill {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 18px;
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 16px, transparent 16px 32px),
+    linear-gradient(180deg, #2a221c, #14100c);
+  color: var(--muted-2);
+  text-align: center;
+  padding: 24px;
+}
+.s-why-single .trip-placeholder-mark {
+  font-family: 'Inter', sans-serif;
+  font-style: normal; font-weight: 800;
+  font-size: 96px; line-height: 1;
+  color: var(--paper);
+  opacity: 0.18;
+  letter-spacing: -0.04em;
+}
+.s-why-single .trip-placeholder-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; letter-spacing: 0.06em;
+  line-height: 1.5;
+  opacity: 0.72;
+}
+.s-why-single .trip-tag {
+  position: absolute;
+  left: 120px;
+  top: 956px;
+  width: 720px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px; letter-spacing: 0.22em; text-transform: lowercase;
+  color: var(--muted-2);
+  text-align: center;
+  z-index: 2;
+}
+.s-why-single .why-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px; letter-spacing: 0.24em;
+  color: var(--slap);
+}
+.s-why-single .why-headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900; letter-spacing: -0.03em;
+  font-size: 116px; line-height: 0.95;
+  color: var(--paper);
+  margin: 0;
+}
+.s-why-single .why-headline em {
+  font-style: normal; font-weight: 500;
+  color: var(--slap);
+}
+.s-why-single .why-body {
+  font-size: 32px; line-height: 1.5;
+  color: var(--muted-2);
+  max-width: 760px;
+  text-wrap: pretty;
+  margin: 0;
+}
+.s-why-single .why-body b { color: var(--slap); font-weight: 600; }
+.s-why-single .why-pull {
+  font-family: 'Inter', sans-serif;
+  font-style: normal; font-weight: 500;
+  font-size: 36px; line-height: 1.35;
+  color: var(--paper-2);
+  border-left: 3px solid var(--slap);
+  padding: 6px 0 6px 24px;
+  max-width: 740px;
+  margin: 12px 0 0 0;
+}
+
+/* ═════════════════════════════════════════════════════════════
+   04 VIDEO — full-bleed black, video centered
+   ═════════════════════════════════════════════════════════════ */
+.s-video {
+  padding: 0;
+  display: block;
+  background: #000;
+  position: relative;
+}
+.s-video .video-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-video .video-el {
+  width: 92%;
+  height: 92%;
+  max-width: 92%;
+  max-height: 92%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+  outline: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 32px 64px -16px rgba(0,0,0,0.7);
+  border: 0;
+}
+.s-video .video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  color: rgba(255,255,255,0.45);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  pointer-events: none;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 12px, transparent 12px 24px);
+}
+.s-video .video-placeholder .vp-mark {
+  font-size: 120px;
+  line-height: 1;
+  color: rgba(255,255,255,0.2);
+}
+.s-video .video-placeholder .vp-note {
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+.s-video .video-el:has(source) ~ .video-placeholder {
+  display: none;
+}
+
 /* ═════════════════════════════════════════════════════════════
    04 THE QUESTION — all-poster background, big italic question
    ═════════════════════════════════════════════════════════════ */
@@ -385,7 +892,7 @@ html, body { margin: 0; padding: 0; background: #000; }
   border-left: 4px solid var(--slap);
   width: fit-content;
 }
-.s-question .q-body .hi { color: var(--slap); font-style: italic; font-weight: 800; }
+.s-question .q-body .hi { color: var(--slap); font-style: normal; font-weight: 800; }
 .s-question .q-body .big-q { color: var(--slap); font-weight: 900; letter-spacing: -0.04em; font-size: 112px; vertical-align: -10px; line-height: 0; }
 .s-question .q-foot {
   position: absolute;
@@ -471,10 +978,125 @@ html, body { margin: 0; padding: 0; background: #000; }
 .x-ghost .lv { color: var(--slap); display: block; margin-bottom: 4px; }
 
 /* ═════════════════════════════════════════════════════════════
+   05 THE GAME — overview + narrative
+   ═════════════════════════════════════════════════════════════ */
+.game-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 48px;
+  flex: 1;
+  align-items: stretch;
+  min-height: 0;
+}
+.game-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(13,11,9,0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -12px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+.gf-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.gf-row:last-child { border-bottom: none; }
+.gf-k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  letter-spacing: 0.22em;
+  color: var(--slap);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.gf-v {
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--paper);
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.gf-v .pink { font-weight: 500; }
+
+.game-narr {
+  position: relative;
+  padding: 4px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.gn-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  color: var(--slap);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.gn-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--paper);
+  font-weight: 300;
+  margin: 0;
+  text-wrap: pretty;
+  letter-spacing: -0.005em;
+}
+.gn-body .hi { color: var(--slap); font-weight: 500; }
+.gn-body .pink { font-weight: 500; }
+.gn-tail {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 24px;
+  margin-top: 8px;
+  font-style: normal;
+  color: var(--muted-2);
+}
+.game-art {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 0;
+}
+.game-art-ph {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-art-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.game-art-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+}
+
+/* ═════════════════════════════════════════════════════════════
    06 THE Y — modifier cards
    ═════════════════════════════════════════════════════════════ */
 .y-sub { max-width: 1040px; margin: 0 0 40px; font-size: 26px; line-height: 1.5; color: var(--muted-2); }
-.y-sub i { color: var(--slap); font-style: italic; }
+.y-sub i { color: var(--slap); font-style: normal; }
 .y-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -542,6 +1164,230 @@ html, body { margin: 0; padding: 0; background: #000; }
   text-transform: uppercase;
 }
 .y-label .formula .plus { color: var(--slap); }
+
+/* ═════════════════════════════════════════════════════════════
+   07 WHY SLAPARTY — uses standard left-rail + right-content frame
+   ═════════════════════════════════════════════════════════════ */
+.s-why-y .s-right {
+  position: relative;
+  padding: 72px 96px 200px 88px;
+}
+.s-why-y .s-right .slide-title {
+  font-size: 84px !important;
+  margin: 0 0 24px !important;
+}
+
+/* body: 3-col grid (col + center placeholder + col) */
+.s-why-y .why-y-body {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+.s-why-y .why-y-stack {
+  display: flex; flex-direction: column;
+  gap: 28px;
+}
+.s-why-y .why-y-stack .why-col + .why-col {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+}
+.s-why-y .why-col-h {
+  margin: 0 0 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--paper);
+}
+.s-why-y .why-col-rule {
+  border: 0;
+  width: 70px; height: 3px;
+  background: var(--slap);
+  margin: 0 0 24px;
+}
+.s-why-y .why-bullets {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.s-why-y .why-bullets li {
+  position: relative;
+  padding-left: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+  color: var(--paper);
+  letter-spacing: -0.005em;
+}
+.s-why-y .why-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 12px;
+  width: 11px; height: 11px;
+  background: var(--slap);
+  border-radius: 50%;
+}
+.s-why-y .why-bullets li em {
+  color: var(--slap);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* center gif (live capture) */
+.s-why-y .wy-cap {
+  margin: 6px 0 0;
+  width: auto;
+  min-width: 0;
+  display: flex; flex-direction: column;
+  align-items: stretch; gap: 12px;
+}
+.s-why-y .wy-cap-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 426 / 240;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6),
+    0 24px 60px -20px rgba(255,75,131,0.35),
+    0 8px 28px -10px rgba(0,0,0,0.7);
+}
+.s-why-y .wy-cap-frame::before,
+.s-why-y .wy-cap-frame::after {
+  content: ""; position: absolute; pointer-events: none;
+}
+.s-why-y .wy-cap-frame::before {
+  /* corner reg-marks, top-left + bottom-right */
+  inset: 6px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-image: none;
+  clip-path: polygon(
+    0 0, 14px 0, 14px 1px, 1px 1px, 1px 14px, 0 14px,
+    0 100%, 14px 100%, 14px calc(100% - 1px), 1px calc(100% - 1px), 1px calc(100% - 14px), 0 calc(100% - 14px),
+    100% 0, 100% 14px, calc(100% - 1px) 14px, calc(100% - 1px) 1px, calc(100% - 14px) 1px, calc(100% - 14px) 0,
+    100% 100%, calc(100% - 14px) 100%, calc(100% - 14px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) calc(100% - 14px), 100% calc(100% - 14px)
+  );
+  z-index: 2;
+}
+.s-why-y .wy-cap-frame::after {
+  /* subtle scanlines */
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02) 0 1px,
+    transparent 1px 3px
+  );
+  mix-blend-mode: overlay;
+  z-index: 3;
+}
+.s-why-y .wy-cap-frame img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  background: #000;
+  filter: contrast(1.04) saturate(1.05);
+}
+.s-why-y .wy-cap-scan {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--slap, #ff4b83);
+  opacity: 0.55;
+  top: 64%;
+  box-shadow: 0 0 12px rgba(255,75,131,0.6);
+  z-index: 4;
+}
+.s-why-y .wy-cap-cap {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  width: 100%;
+}
+.s-why-y .wy-cap-cap .k {
+  color: var(--slap, #ff4b83);
+  font-weight: 600;
+}
+.s-why-y .wy-cap-cap .v {
+  color: rgba(255,255,255,0.7);
+}
+
+/* center hero placeholder */
+.s-why-y .why-center {
+  margin: 0;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px;
+}
+.s-why-y .why-center-frame {
+  position: relative;
+  width: 300px; height: 300px;
+  clip-path: polygon(4% 8%, 92% 2%, 98% 18%, 100% 70%, 96% 96%, 28% 100%, 8% 94%, 2% 60%, 6% 30%);
+  background: #0d0608;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+.s-why-y .why-center-fill {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(255,138,181,0.35) 0%, transparent 55%),
+    radial-gradient(circle at 30% 70%, rgba(155,63,240,0.2) 0%, transparent 60%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 5px),
+    #1a0a14;
+  display: flex; align-items: center; justify-content: center;
+}
+.s-why-y .why-center-pow {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900; font-style: normal;
+  font-size: 100px; letter-spacing: -0.03em;
+  color: var(--slap);
+  text-shadow:
+    -2px 0 0 rgba(0,255,255,0.6),
+    2px 0 0 rgba(255,80,80,0.5),
+    0 0 30px rgba(255,138,181,0.6);
+  transform: rotate(-6deg);
+}
+.s-why-y .why-center-glitch {
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  mix-blend-mode: screen;
+}
+.s-why-y .why-center-glitch.g1 { top: 22%; left: -2%; width: 104%; height: 4px; opacity: 0.3; }
+.s-why-y .why-center-glitch.g2 { top: 58%; left: -2%; width: 104%; height: 2px; background: var(--slap); opacity: 0.6; }
+.s-why-y .why-center-glitch.g3 { top: 78%; left: -2%; width: 104%; height: 6px; opacity: 0.15; }
+.s-why-y .why-center-meta {
+  display: flex; flex-direction: column; gap: 4px;
+  align-items: flex-start; width: 300px;
+}
+.s-why-y .why-meta-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  color: rgba(232,226,212,0.42);
+  letter-spacing: 0.08em;
+}
+
+/* offset punchlines pinned to bottom of right pane */
+.s-why-y .why-y-punch {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--paper);
+}
+.s-why-y .why-y-punch em {
+  color: var(--slap);
+  font-style: normal;
+  font-weight: 900;
+}
+.s-why-y .why-y-punch--l { left: 88px;  bottom: 60px; }
+.s-why-y .why-y-punch--r { right: 96px; bottom: 24px; text-align: right; }
 
 /* ═════════════════════════════════════════════════════════════
    07 THREE WAYS TO SLAP
@@ -616,7 +1462,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .aud-q {
   font-family: 'Inter', sans-serif;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: 56px;
   line-height: 1.2;
@@ -632,6 +1478,8 @@ html, body { margin: 0; padding: 0; background: #000; }
   max-width: 1400px;
 }
 .aud-q .hi { color: var(--slap); font-style: normal; font-weight: 500; }
+.aud-q-top { margin-top: 72px; max-width: 1400px; }
+.aud-title-bottom { margin-top: 64px; }
 .aud-q small {
   display: block;
   font-size: 28px;
@@ -643,35 +1491,48 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .aud-meta {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   background: rgba(10, 8, 16, 0.68);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 36px 48px;
-  border-radius: 16px;
+  padding: 0;
+  border-radius: 20px;
   box-shadow: 0 24px 48px -12px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.35);
+  overflow: hidden;
+  margin-top: 24px;
+  max-width: 1500px;
 }
 .aud-row {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
   border-top: none;
-  padding: 0;
+  padding: 56px 64px;
+  position: relative;
+}
+.aud-row:nth-child(1),
+.aud-row:nth-child(2) {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.aud-row:nth-child(odd) {
+  border-right: 1px solid rgba(255,255,255,0.08);
 }
 .aud-row .k {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 24px;
-  letter-spacing: 0.2em;
+  font-size: 22px;
+  letter-spacing: 0.22em;
   color: var(--slap);
   text-transform: uppercase;
   font-weight: 500;
 }
 .aud-row .v {
-  font-size: 26px;
+  font-size: 44px;
   color: var(--paper);
-  line-height: 1.4;
+  line-height: 1.2;
   text-wrap: pretty;
+  font-weight: 300;
+  letter-spacing: -0.01em;
 }
 
 /* ═════════════════════════════════════════════════════════════
@@ -682,15 +1543,12 @@ html, body { margin: 0; padding: 0; background: #000; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
-  margin-top: 56px;
+  margin-top: 16px;
   flex: 1;
 }
 .art-grid.three {
   grid-template-columns: repeat(3, 1fr);
   gap: 56px;
-}
-.art-grid.three .art-card {
-  aspect-ratio: 4 / 3;
 }
 .art-item {
   display: flex;
@@ -699,8 +1557,8 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .art-card {
   position: relative;
-  aspect-ratio: 3 / 4;
-  min-height: 320px;
+  height: 560px;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 24px 48px -12px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.35);
@@ -730,15 +1588,6 @@ html, body { margin: 0; padding: 0; background: #000; }
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-.char-split .art-img { width: 50%; inset: 0 50% 0 0; }
-.char-split .art-img-2 {
-  position: absolute;
-  inset: 0 0 0 50%;
-  width: 50%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
@@ -775,7 +1624,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 .art-foot .itt {
   font-size: 24px;
   color: var(--muted-2);
-  font-style: italic;
+  font-style: normal;
   margin: 0;
   max-width: 780px;
 }
@@ -995,7 +1844,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 
 .polish-pull {
   font-family: 'Inter', sans-serif;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-size: 30px;
   line-height: 1.3;
@@ -1105,7 +1954,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 .s-end .thanks {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-style: italic;
+  font-style: normal;
   font-size: 140px;
   line-height: 0.95;
   color: var(--paper);
@@ -1236,7 +2085,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 }
 .slide:not(.s-cover):not(.s-question):not(.s-end):not(.s-title) .slide-title .pink {
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
 }
 
 /* 02 TITLE — same frame treatment but keep hero image + logo */
@@ -1261,22 +2110,177 @@ html, body { margin: 0; padding: 0; background: #000; }
 
 <!-- ═══════════════════ 01 COVER (original I) ═══════════════════ -->
 <section class="slide s-cover" data-screen-label="01 Cover" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="0" data-deck-active="">
-  <img class="poster" src="assets/key-poster.png?v=3" alt="" style="object-fit: cover;">
+  <img class="poster" src="assets/key-poster-clean.png?v=1" alt="" style="object-fit: cover;">
   <!-- top/bottom vignette bars for meta legibility -->
   <div style="position:absolute; top:0; left:0; right:0; height:140px; background:linear-gradient(180deg, rgba(0,0,0,0.75) 0%, transparent 100%); z-index:2;"></div>
   <div style="position:absolute; bottom:0; left:0; right:0; height:160px; background:linear-gradient(0deg, rgba(0,0,0,0.88) 0%, transparent 100%); z-index:2;"></div>
-  <!-- top-left: thesis pitch -->
-  <div style="position:absolute; top:48px; left:64px; z-index:3; white-space:nowrap; font-family: 'JetBrains Mono', monospace; font-size:26px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(245,236,255,0.92);">
-    Thesis Pitch
-  </div>
-  <!-- bottom-right: name -->
-  <div style="position:absolute; bottom:48px; right:64px; z-index:3; white-space:nowrap; font-family: 'JetBrains Mono', monospace; font-size:26px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(245,236,255,0.92);">
-    <span style="color: var(--slap);">—</span>&nbsp;&nbsp;Tielong Tangeleih
+  <!-- centered logo -->
+  <img src="assets/logo-slaparty.png?v=1" alt="Slaparty" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:62%; max-width:1100px; z-index:3; filter: drop-shadow(0 12px 36px rgba(0,0,0,0.6));">
+  <!-- bottom-right: thesis · name · email — V2 stacked -->
+  <div style="position:absolute; bottom:56px; right:72px; z-index:3; text-align:right;">
+    <div style="font-family: 'Inter', sans-serif; font-weight:500; font-size:18px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(245,236,255,0.55); margin:0 0 14px 0;">Thesis Pitch</div>
+    <div style="font-family: 'Inter', sans-serif; font-weight:700; font-size:44px; letter-spacing:-0.01em; line-height:1; color:#f5ecdf; margin:0 0 14px 0;">Tielong Tangeleih</div>
+    <div style="font-family: 'Inter', sans-serif; font-weight:500; font-size:18px; letter-spacing:0.04em; color:rgba(245,236,255,0.55);">tangelei@usc.edu</div>
   </div>
 </section>
 
-<!-- ═══════════════════ 02 TITLE ═══════════════════ -->
-<section class="slide s-title" data-screen-label="02 Slaparty" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="1">
+<!-- ═══════════════════ 02b VIDEO PLAYBACK (moved before Slap) ═══════════════════ -->
+<section class="slide s-video" data-screen-label="02b Video" data-om-validate="" data-deck-slide="1.5">
+  <div class="video-stage">
+    <iframe class="video-el" src="https://drive.google.com/file/d/14TzjATaUJNlTPfk792vvb4aGknrH04D7/preview" title="Slaparty video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- ═══════════════════ 03 SLAP IS INSULT ═══════════════════ -->
+<section class="slide s-why-single insult" data-screen-label="03 Slap is Insult" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="2">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">03</div>
+      <hr class="rule">
+      <div class="section-label">// Motivation</div>
+      <div class="chap-title">Why start from a slap.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Reference</span>
+      <span class="v">Oscars '22 · Will Smith</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Motivation</div>
+    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
+    <div class="why-single-grid">
+      <div class="why-triptych why-triptych--solo">
+        <figure class="trip-pane" style="position: relative;">
+          <img src="assets/oscars-slap.gif" alt="Will Smith slaps Chris Rock at the 2022 Oscars">
+          <span aria-hidden="true" style="position:absolute; left:58%; top:38%; width:7%; height:9%; background:#0e0a08; border-radius:50%; box-shadow:0 0 14px 6px #0e0a08; pointer-events:none;"></span>
+        </figure>
+      </div>
+      <div class="why-text">
+        <div class="why-num">
+</div>
+        <h2 class="why-headline">Slap is <em>insult</em>.</h2>
+        <p class="why-body">It's not the pain people remember. It's <b>who looked small</b> when the hand came down.</p>
+        <p class="why-pull">
+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 04 THE QUESTION ═══════════════════ -->
+<!-- (Question moved below Myself) -->
+<!-- ═══════════════════ 04 HUMILIATION IN CO-OP GAMES ═══════════════════ -->
+<section class="slide s-why-single coop-humiliation" data-screen-label="04 Humiliation in Co-op Games" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="3">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">04</div>
+      <hr class="rule">
+      <div class="section-label">// Motivation</div>
+      <div class="chap-title">Everywhere on screen. Nowhere in games.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Reference</span>
+      <span class="v">Pop-culture humiliation</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Motivation</div>
+    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
+    <div class="why-single-grid">
+      <figure class="coop-chart">
+        <img src="assets/humiliation-spectrum.png" alt="Humiliation spectrum in co-op games — responsibility clarity vs. emotional intensity" style="object-fit: fill; width: 1427px; height: 962px; padding: 23.0195px; border-width: 0px; border-style: solid; margin: 0px">
+      </figure>
+      <div class="coop-text">
+        <h2 class="coop-headline">Humiliation in Co-op Games</h2>
+        <p class="coop-body">A landscape of how today’s co-op games handle humiliation — mapped by emotional intensity and responsibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 05 MYSELF ═══════════════════ -->
+<section class="slide s-why-single myself" data-screen-label="05 Myself" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">05</div>
+      <hr class="rule">
+      <div class="section-label">// Motivation</div>
+      <div class="chap-title">Why this game, by me.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Reference</span>
+      <span class="v">Personal · played &amp; loved</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Motivation</div>
+    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
+    <div class="why-single-grid">
+      <div class="myself-text">
+        <h2 class="myself-headline">I <span class="pink">love</span> co-op games.</h2>
+        <p class="myself-body">
+</p>
+      </div>
+      <div class="myself-wall" aria-label="co-op games I have loved playing">
+        <figure class="mw-cell mw-1"><img src="assets/coop-nioh3.png" alt="Nioh 3" style="height: 329px"><span class="mw-tag">Nioh 3</span></figure>
+        <figure class="mw-cell mw-2"><img src="assets/coop-lostcastle2.png" alt="Lost Castle 2"><span class="mw-tag">Lost Castle 2</span></figure>
+        <figure class="mw-cell mw-3"><img src="assets/coop-splitfiction.png" alt="Split Fiction"><span class="mw-tag">Split Fiction</span></figure>
+        <figure class="mw-cell mw-4"><img src="assets/coop-ravenswatch.png" alt="Ravenswatch" style="opacity: 1; width: 296px; height: 380px"><span class="mw-tag">Ravenswatch</span></figure>
+        <figure class="mw-cell mw-5"><img src="assets/coop-borderlands4.png" alt="Borderlands 4" style="height: 361px"><span class="mw-tag">Borderlands 4</span></figure>
+        <figure class="mw-cell mw-6"><img src="assets/coop-windblown.png" alt="Windblown" style="object-fit: fill; width: 309px; height: 289px"><span class="mw-tag">Windblown</span></figure>
+        <figure class="mw-cell mw-7"><img src="assets/coop-remnant2.png" alt="Remnant 2"><span class="mw-tag">Remnant 2</span></figure>
+        <figure class="mw-cell mw-8"><img src="assets/coop-warcraft3-tft.png" alt="Warcraft III: The Frozen Throne"><span class="mw-tag">Warcraft III · TFT</span></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 05.5 HUMILIATION IN CO-OP GAMES (copy) ═══════════════════ -->
+<section class="slide s-why-single coop-humiliation" data-screen-label="05.5 Humiliation in Co-op Games (copy)" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4.5">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">04</div>
+      <hr class="rule">
+      <div class="section-label">// Motivation</div>
+      <div class="chap-title">Everywhere on screen. Nowhere in games.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Reference</span>
+      <span class="v">Pop-culture humiliation</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Motivation</div>
+    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
+    <div class="why-single-grid">
+      <figure class="coop-chart">
+        <img src="assets/humiliation-spectrum-slaparty.png" alt="Humiliation spectrum in co-op games — Slaparty positioning" style="object-fit: fill; width: 1427px; height: 962px; padding: 23.0195px; border-width: 0px; border-style: solid; margin: 0px">
+      </figure>
+      <div class="coop-text">
+        <h2 class="coop-headline">Humiliation in Co-op Games</h2>
+        <p class="coop-body">A landscape of how today’s co-op games handle humiliation — mapped by emotional intensity and responsibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (moved up) -->
+<!-- ═══════════════════ 06 THE QUESTION ═══════════════════ -->
+<section class="slide s-question" data-screen-label="06 The Question" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4.7">
+  <div class="bg"></div>
+  <div class="q-inner">
+    <div class="q-eye">// Thesis Question</div>
+    <div class="q-body">Where's the balance between <span class="hi">humiliation</span> and <span class="hi">play</span> when <span class="hi">slap</span> becomes the core mechanic of a party game<span class="big-q">?</span></div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════ 02 TITLE (moved to position 6) ═══════════════════ -->
+<section class="slide s-title" data-screen-label="02 Slaparty" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="5">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
@@ -1300,7 +2304,7 @@ html, body { margin: 0; padding: 0; background: #000; }
         <div class="eyebrow-big">// Thesis Project</div>
         <img class="logo-big" src="assets/logo-slaparty.png?v=1" alt="Slaparty">
         <p class="tagline">
-          A 3D co-op action game where two characters accidentally slap their way through a series of experiments — designed by their creator, <b>Tielong</b>.
+          A 3D co-op action game where two glitched characters slap their way through a gauntlet built by their own creator, <b>Tielong</b>.
         </p>
       </div>
       <div class="credits">
@@ -1309,59 +2313,12 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
 </section>
 
-<!-- ═══════════════════ 03 WHY SLAP ═══════════════════ -->
-<section class="slide" data-screen-label="03 Why Slap" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="2">
-  <div class="s-left">
-    <div class="lc-top"></div>
-    <div class="lc-mid">
-      <div class="num">03</div>
-      <hr class="rule">
-      <div class="section-label">// Motivation</div>
-      <div class="chap-title">Why start from a slap.</div>
-    </div>
-    <div class="lc-bot">
-      <span class="k">References</span>
-      <span class="v">Power Slap · Oscars '22</span>
-    </div>
-  </div>
-  <div class="s-right">
-    <div class="eyebrow">// Motivation</div>
-    <h1 class="slide-title">Why the F is <span class="pink">slap</span>?</h1>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-card">
-          <img class="why-gif" src="assets/power-slap.gif" alt="Power Slap">
-        </div>
-        <div class="why-label"><span class="num">01</span>Slap is insult.</div>
-        <p class="why-desc">In games, insulting behavior usually escalates tension between players — and produces bad experiences.</p>
-      </div>
-      <div class="why-item">
-        <div class="why-card">
-          <img class="why-gif" src="assets/oscars-slap.gif" alt="Oscars slap" style="object-fit: cover; width: 786px; height: 798px">
-        </div>
-        <div class="why-label"><span class="num">02</span>Slap is theater.</div>
-        <p class="why-desc">Power Slap. Will Smith at the Oscars. Film slaps. They share two things — they are humiliating, and they are <b>LOUD</b>. Slap makes tension before meaning.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ 04 THE QUESTION (break-out) ═══════════════════ -->
-<section class="slide s-question" data-screen-label="04 The Question" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="3">
-  <div class="bg"></div>
-  <div class="q-inner">
-    <div class="q-eye">// The Question</div>
-    <div class="q-body">Where's the balance between <span class="hi">insult</span> and <span class="hi">fun</span> when <span class="hi">slap</span> becomes the core mechanic of a party game<span class="big-q">?</span></div>
-  </div>
-
-</section>
-
 <!-- ═══════════════════ 05 THE X ═══════════════════ -->
-<section class="slide" data-screen-label="05 The X" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4">
+<section class="slide" data-screen-label="06 The X" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="5">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
-      <div class="num">05</div>
+      <div class="num">06</div>
       <hr class="rule">
       <div class="section-label">// The Invariant</div>
       <div class="chap-title">What must never change.</div>
@@ -1372,65 +2329,91 @@ html, body { margin: 0; padding: 0; background: #000; }
     </div>
   </div>
   <div class="s-right">
-    <div class="eyebrow">// The Invariant</div>
-    <h1 class="slide-title">The X — <span class="pink">SLAP</span></h1>
-    <div class="x-layout">
-      <div class="x-core">
-        <div class="hand">✋</div>
-        <div class="x-label">Slap // Constant</div>
+    <div class="eyebrow">// The "X"</div>
+    <h1 class="slide-title">What is <span class="pink">SLAPARTY</span>  all about？</h1>
+    <div class="game-layout">
+      <div class="game-narr">
+        <p class="gn-body">
+          Two characters are spawned in a sandbox level by their creator, <span class="pink">Tielong</span>. Suddenly, a bug occurs, and they begin <span class="hi">slapping each other endlessly</span>.
+        </p>
+        <p class="gn-body">
+          <span class="pink">Tielong</span> never intended this to happen. But to his surprise, he found it interesting. Instead of fixing the bug, he starts to build variety of levels just to see how far this accident could go.
+        </p>
+        <p class="gn-body gn-tail">
+          Players inhabit these two glitched bodies, slapping their way through Tielong's gauntlet.
+        </p>
       </div>
-      <div class="x-copy">
-        <div class="statement">One verb.<br>Every level.<br>Nothing replaces it.</div>
-        <p class="body">Slap is the only input every player brings into every level. Every level bends around it. </p>
+      <div class="game-art">
+        <div class="game-art-ph">
+          <img class="game-art-img" src="assets/the-x-scene.png?v=2" alt="">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ 06 THE Y ═══════════════════ -->
-<section class="slide" data-screen-label="06 The Y" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="5">
-  <div class="s-left">
-    <div class="lc-top"></div>
-    <div class="lc-mid">
-      <div class="num">06</div>
-      <hr class="rule">
-      <div class="section-label">// The Modifiers</div>
-      <div class="chap-title">What mutates each level.</div>
-    </div>
-    <div class="lc-bot">
-      <span class="k">Structure</span>
-      <span class="v">Y · mutable</span>
-    </div>
-  </div>
-  <div class="s-right">
-    <div class="eyebrow">// The Modifiers</div>
-    <h1 class="slide-title">The Y — <span class="pink">Environment</span></h1>
-    <p class="y-sub">Every level introduces one new variable that completely reshapes what a slap <i>means</i>.</p>
-    <div class="y-cards">
-      <div class="y-item a">
-        <div class="y-card">
-          <img class="y-bg" src="assets/level-a.png" alt="">
-        </div>
-        <div class="y-label"><span class="lvl">Level A</span><span class="formula">Slap<span class="plus"> </span>Wisely</span></div>
-      </div>
-      <div class="y-item b">
-        <div class="y-card">
-          <div class="y-placeholder">?</div>
-        </div>
-        <div class="y-label"><span class="lvl">Level B-1</span><span class="formula">Slap<span class="plus"> </span>Constantly</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ 07 THREE WAYS ═══════════════════ -->
-<section class="slide" data-screen-label="07 Three Ways" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="6">
+<!-- ═══════════════════ 07 WHY SLAPARTY ═══════════════════ -->
+<section class="slide s-why-y" data-screen-label="07 Why Slaparty" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="6">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
       <div class="num">07</div>
       <hr class="rule">
-      <div class="section-label">// Core Feature</div>
+      <div class="section-label">// The Y</div>
+      <div class="chap-title">Why this game, not another.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Sales</span>
+      <span class="v">Two pillars · one verb</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// The Y</div>
+    <h1 class="slide-title">Why you should play <span class="pink">SLAPARTY</span>?</h1>
+
+    <div class="why-y-body">
+      <figure class="wy-cap">
+        <div class="wy-cap-frame">
+          <img src="assets/why-gameplay.gif" alt="Slaparty gameplay loop">
+          <span class="wy-cap-scan"></span>
+        </div>
+      </figure>
+
+      <div class="why-y-stack">
+        <section class="why-col why-col--l">
+          <h2 class="why-col-h">Juicyyyyy Slap</h2>
+          <hr class="why-col-rule">
+          <ul class="why-bullets">
+            <li>Slap-first combat, <em>Power Slap</em> energy</li>
+            <li>Hit-stop, screen shake, particle bursts</li>
+            <li>Anime camera cuts on every clash</li>
+            <li>Charge / Rally / Combo variants</li>
+          </ul>
+        </section>
+
+        <section class="why-col why-col--r">
+          <h2 class="why-col-h">Every Level is a different</h2>
+          <hr class="why-col-rule">
+          <ul class="why-bullets">
+            <li>2-player co-op → 1v1 duel → boss finale</li>
+            <li><em>Smash Bros</em> action grammar</li>
+            <li>A different art world every level</li>
+            <li>Unmistakably a <em>Tielong</em> game</li>
+          </ul>
+      </section>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ 07 THREE WAYS ═══════════════════ -->
+<section class="slide" data-screen-label="08 Three Ways" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="7">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">08</div>
+      <hr class="rule">
+      <div class="section-label">// Core Mechanic</div>
       <div class="chap-title">Three textures of the same verb.</div>
     </div>
     <div class="lc-bot">
@@ -1439,7 +2422,7 @@ html, body { margin: 0; padding: 0; background: #000; }
     </div>
   </div>
   <div class="s-right">
-    <div class="eyebrow">// Core Feature</div>
+    <div class="eyebrow">// Core Mechanic</div>
     <h1 class="slide-title">Three ways to <span class="pink">SLAP</span></h1>
     <div class="slaps-grid">
       <div class="slap-card a">
@@ -1456,7 +2439,7 @@ html, body { margin: 0; padding: 0; background: #000; }
       </div>
     </div>
     <div class="slaps-names">
-      <h4>Normal Slap</h4>
+      <h4>Normal Slap<br><br></h4>
       <h4>Charged Slap</h4>
       <h4>Rally Slap</h4>
     </div>
@@ -1464,11 +2447,11 @@ html, body { margin: 0; padding: 0; background: #000; }
 </section>
 
 <!-- ═══════════════════ 08 AUDIENCE ═══════════════════ -->
-<section class="slide" data-screen-label="08 Audience" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="7">
+<section class="slide" data-screen-label="09 Audience" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="8">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
-      <div class="num">08</div>
+      <div class="num">09</div>
       <hr class="rule">
       <div class="section-label">// Target Audience</div>
       <div class="chap-title">Who sits on the couch.</div>
@@ -1480,15 +2463,11 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
   <div class="s-right">
     <div class="eyebrow">// Target Audience</div>
-    <h1 class="slide-title">Who it's <span class="pink">for</span>.</h1>
+    <h1 class="slide-title">Who should <span class="pink">give it a try</span>?</h1>
     <div class="aud-grid">
-      <blockquote class="aud-q">
-        "My classmates and coworkers are <span class="hi">drowning</span> — trying to hold together order in a world that keeps breaking."
-        <small>SLAPARTY is <span style="color: var(--slap);">permission to break it back</span> — together — for twenty minutes.</small>
-      </blockquote>
       <div class="aud-meta">
         <div class="aud-row"><div class="k">Primary</div><div class="v">USC Games Expo attendees. My peers.</div></div>
-        <div class="aud-row"><div class="k">Context</div><div class="v">Local, 2-player.</div></div>
+        <div class="aud-row"><div class="k">Context</div><div class="v">Local, 2-player, action,action</div></div>
         <div class="aud-row"><div class="k">Session</div><div class="v">~25 minutes per run.</div></div>
         <div class="aud-row"><div class="k">Mode</div><div class="v">Co-op, controllers.</div></div>
       </div>
@@ -1497,11 +2476,11 @@ html, body { margin: 0; padding: 0; background: #000; }
 </section>
 
 <!-- ═══════════════════ 09 ART DIRECTION ═══════════════════ -->
-<section class="slide" data-screen-label="09 Art Direction" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="8">
+<section class="slide" data-screen-label="10 Art Direction" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="9">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
-      <div class="num">09</div>
+      <div class="num">10</div>
       <hr class="rule">
       <div class="section-label">// Art Direction</div>
       <div class="chap-title">Different skins, same bones.</div>
@@ -1513,68 +2492,83 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
   <div class="s-right">
     <div class="eyebrow">// Art Direction</div>
-    <h1 class="slide-title" style="font-size: 72px;">Differentiated, <span class="pink">one game.</span></h1>
-    <p class="art-sub">Each level is its own visual experiment. Character silhouettes, slap feel, and narrator UI stay identical.</p>
-    <div class="art-grid three">
+    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">it looks like</span></h1>
+    <p class="art-sub">
+</p>
+    <div class="art-grid">
       <div class="art-item">
-        <div class="art-card cy char-split">
-          <img class="art-img" src="assets/char-real.jpg" alt="">
-          <img class="art-img-2" src="assets/char-style.png" alt="">
-          <span class="art-ref">Ref: self + chibi anime</span>
+        <div class="art-card cy">
+          <img class="art-img" src="assets/art-characters.jpg" alt="" onerror="this.style.display='none'">
         </div>
-        <div class="art-label"><span class="lv">01</span><span class="nm">Characters</span></div>
-      </div>
-      <div class="art-item">
-        <div class="art-card ki">
-          <span class="art-ref">Ref: Tron · Overcooked · Naruto UNS</span>
-        </div>
-        <div class="art-label"><span class="lv">02</span><span class="nm">Visual</span></div>
+        <div class="art-label"><span class="lv">01</span><span class="nm">Character </span></div>
       </div>
       <div class="art-item">
         <div class="art-card an">
-          <span class="art-ref">Ref: Power Slap · anime impact</span>
+          <img class="art-img" src="assets/art-charge.gif" alt="" onerror="this.style.display='none'">
         </div>
-        <div class="art-label"><span class="lv">03</span><span class="nm">Slap — feels &amp; looks like</span></div>
+        <div class="art-label"><span class="lv">02</span><span class="nm">Charge </span></div>
+      </div>
+      <div class="art-item">
+        <div class="art-card ki">
+          <img class="art-img" src="assets/art-slap.gif" alt="" onerror="this.style.display='none'" style="object-position: 60% center">
+        </div>
+        <div class="art-label"><span class="lv">03</span><span class="nm">Slap</span></div>
+      </div>
+      <div class="art-item">
+        <div class="art-card an">
+          <img class="art-img" src="assets/art-slap-impact.gif" alt="" onerror="this.style.display='none'" style="object-fit: contain; padding: 0px; transform: scaleX(-1)">
+        </div>
+        <div class="art-label"><span class="lv">04</span><span class="nm"> Being slapped</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ 10 SCALE ═══════════════════ -->
-<section class="slide" data-screen-label="10 Scope" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="9">
+<!-- ═══════════════════ 10b ART DIRECTION (copy) ═══════════════════ -->
+<section class="slide" data-screen-label="10b Art Direction" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
       <div class="num">10</div>
       <hr class="rule">
-      <div class="section-label">// Game Scale</div>
-      <div class="chap-title">The shape of one run.</div>
+      <div class="section-label">// Art Direction</div>
+      <div class="chap-title">Different skins, same bones.</div>
     </div>
     <div class="lc-bot">
-      <span class="k">Target</span>
-      <span class="v">~20 min / run</span>
+      <span class="k">Ref</span>
+      <span class="v">It Takes Two</span>
     </div>
   </div>
   <div class="s-right">
-    <div class="eyebrow">// Game Scale</div>
-    <h1 class="slide-title">One <span class="pink">run</span>.</h1>
-    <div class="scale-timeline">
-      <div class="tnodes">
-        <div class="tnode"><div class="dot"></div><div class="name">Intro</div><div class="time">~2 min</div></div>
-        <div class="tnode hi"><div class="dot"></div><div class="name">Level A</div><div class="time">~4 min</div></div>
-        <div class="tnode"><div class="dot"></div><div class="name">Dice</div><div class="time">~1 min</div></div>
-        <div class="tnode hi"><div class="dot"></div><div class="name">B-1 / B-2</div><div class="time">~4 min</div></div>
-        <div class="tnode hi"><div class="dot"></div><div class="name">Level C</div><div class="time">~4 min</div></div>
-        <div class="tnode"><div class="dot"></div><div class="name">Choice</div><div class="time">~1 min</div></div>
-        <div class="tnode hi"><div class="dot"></div><div class="name">Ending</div><div class="time">~4 min</div></div>
+    <div class="eyebrow">// Art Direction</div>
+    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">it looks like</span></h1>
+    <p class="art-sub">
+</p>
+    <div class="art-grid">
+      <div class="art-item">
+        <div class="art-card cy">
+          <img class="art-img" src="assets/art-level.png" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="art-label"><span class="lv">05</span><span class="nm">Levels</span></div>
       </div>
-    </div>
-    <div class="scale-stats">
-      <div class="stat"><div class="k">Playtime</div><div class="v"><span class="pink">~20</span><span class="u">min / run</span></div></div>
-      <div class="stat"><div class="k">Scenarios</div><div class="v">3<span class="u">cmp</span> + 2<span class="u">end</span></div></div>
-      <div class="stat"><div class="k">Players</div><div class="v">2<span class="u">local</span></div></div>
-      <div class="stat"><div class="k">Platform</div><div class="v">PC<span class="u">+ pad</span></div></div>
-      <div class="stat"><div class="k">Ship</div><div class="v"><span class="pink">May</span><span class="u">2027</span></div></div>
+      <div class="art-item">
+        <div class="art-card an">
+          <img class="art-img" src="assets/art-charge.gif" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="art-label"><span class="lv">06</span><span class="nm">Levels</span></div>
+      </div>
+      <div class="art-item">
+        <div class="art-card ki">
+          <img class="art-img" src="assets/art-slap.gif" alt="" onerror="this.style.display='none'" style="object-position: 60% center">
+        </div>
+        <div class="art-label"><span class="lv">07</span><span class="nm">Levels</span></div>
+      </div>
+      <div class="art-item">
+        <div class="art-card an">
+          <img class="art-img" src="assets/art-slap-impact.gif" alt="" onerror="this.style.display='none'" style="object-fit: contain; padding: 0px; transform: scaleX(-1)">
+        </div>
+        <div class="art-label"><span class="lv">08</span><span class="nm">Levels</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1607,7 +2601,7 @@ html, body { margin: 0; padding: 0; background: #000; }
             <li><span class="what">Narrative</span><span class="role">Tielong / Subjects</span></li>
           </ul>
         </div>
-        <div class="team-label"><span class="ttag">Human</span><span class="tname">Tielong</span></div>
+
       </div>
       <div class="team-item">
         <div class="team-col">
@@ -1618,7 +2612,7 @@ html, body { margin: 0; padding: 0; background: #000; }
             <li><span class="what">Custom Agent</span><span class="role">Project producer — in dev</span></li>
           </ul>
         </div>
-        <div class="team-label"><span class="ttag">AI Collaborators</span><span class="tname">The Stack</span></div>
+
       </div>
       <div class="team-item">
         <div class="team-col">
@@ -1628,12 +2622,12 @@ html, body { margin: 0; padding: 0; background: #000; }
             <li><span class="what">Mark Bolas</span><span class="role">Faculty advisor</span></li>
           </ul>
         </div>
-        <div class="team-label"><span class="ttag">Support</span><span class="tname">Around me</span></div>
+
       </div>
     </div>
-    <div class="team-foot">
-      <span>[ Team expansion evaluated <b>post-summer</b> — gated on progress ]</span>
-      <span>// 2026 — 2027</span>
+    <div class="team-foot" style="display:none">
+      <span></span>
+      <span></span>
     </div>
   </div>
 </section>
@@ -1713,154 +2707,15 @@ html, body { margin: 0; padding: 0; background: #000; }
 
 </deck-stage>
 
-<!-- ═══════════════════ Web overlay UI (floating controls) ═══════════════════ -->
-<style>
-  .web-ui { position: fixed; z-index: 9999; font-family: 'JetBrains Mono', monospace; color: #e8e2d4; pointer-events: none; }
-  .web-ui button { pointer-events: auto; cursor: pointer; }
-  .web-ui .bar {
-    position: fixed; right: 18px; bottom: 18px;
-    display: flex; gap: 8px; align-items: center;
-    background: rgba(13,11,9,0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(232,226,212,0.18);
-    padding: 8px 10px; border-radius: 999px;
-    pointer-events: auto;
-    transition: opacity .25s ease;
-  }
-  .web-ui .bar.dim { opacity: 0.18; }
-  .web-ui .bar.dim:hover { opacity: 1; }
-  .web-ui .btn {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: transparent; border: 1px solid rgba(232,226,212,0.22);
-    color: #e8e2d4; font-size: 16px; line-height: 1;
-    display: inline-flex; align-items: center; justify-content: center;
-    transition: all .15s ease;
-  }
-  .web-ui .btn:hover { background: rgba(255,138,181,0.14); border-color: rgba(255,138,181,0.5); color: #ff8ab5; }
-  .web-ui .btn:active { transform: scale(0.94); }
-  .web-ui .counter {
-    font-size: 12px; letter-spacing: 0.18em; padding: 0 10px;
-    color: rgba(232,226,212,0.78); white-space: nowrap; user-select: none;
-    min-width: 56px; text-align: center;
-  }
-  .web-ui .counter b { color: #ff8ab5; font-weight: 700; }
-  .web-ui .hint {
-    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
-    background: rgba(13,11,9,0.85); border: 1px solid rgba(255,138,181,0.4);
-    color: #e8e2d4; padding: 10px 18px; border-radius: 999px;
-    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
-    pointer-events: none;
-    opacity: 0; transition: opacity .4s ease;
-  }
-  .web-ui .hint.show { opacity: 1; }
-  .web-ui .hint .key {
-    display: inline-block; padding: 2px 7px; margin: 0 2px;
-    border: 1px solid rgba(232,226,212,0.4); border-radius: 4px;
-    font-size: 11px; color: #fff;
-  }
-  .web-ui .hint .pink { color: #ff8ab5; }
-  @media (max-width: 720px) {
-    .web-ui .bar { right: 10px; bottom: 10px; padding: 6px 8px; }
-    .web-ui .btn { width: 44px; height: 44px; font-size: 18px; }
-    .web-ui .counter { font-size: 11px; min-width: 48px; }
-    .web-ui .hint { font-size: 10px; padding: 8px 12px; bottom: 78px; }
-  }
-</style>
-
-<div class="web-ui">
-  <div class="hint" id="web-hint">
-    <span class="key">←</span><span class="key">→</span>
-    <span style="margin: 0 6px; opacity: 0.6;">or</span>
-    <span class="pink">tap left / right</span>
-    <span style="margin: 0 6px; opacity: 0.6;">to navigate</span>
-  </div>
-
-  <div class="bar" id="web-bar">
-    <button class="btn" id="btn-prev" title="Previous (←)" aria-label="Previous slide">‹</button>
-    <div class="counter" id="counter"><b>1</b> / 13</div>
-    <button class="btn" id="btn-next" title="Next (→)" aria-label="Next slide">›</button>
-    <button class="btn" id="btn-fs" title="Toggle fullscreen (F)" aria-label="Fullscreen" style="margin-left: 4px;">⛶</button>
-  </div>
-</div>
-
 <script>
-(function () {
-  const stage = document.querySelector('deck-stage');
-  if (!stage) return;
-
-  const counter = document.getElementById('counter');
-  const bar = document.getElementById('web-bar');
-  const hint = document.getElementById('web-hint');
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
-  const btnFs = document.getElementById('btn-fs');
-
-  const slides = stage.querySelectorAll(':scope > section.slide');
-  const total = slides.length;
-
-  // ── Counter, driven by deck-stage's own state ──────────────────
-  let suppressHash = false;
-  function updateCounter() {
-    const n = (stage.index ?? 0) + 1;
-    counter.innerHTML = `<b>${n}</b> / ${total}`;
-    // Keep URL hash in sync for deep-linking, without triggering our hashchange handler
-    suppressHash = true;
-    if (location.hash !== '#' + n) {
-      history.replaceState(null, '', '#' + n);
-    }
-    setTimeout(() => { suppressHash = false; }, 0);
-  }
-  stage.addEventListener('slidechange', updateCounter);
-
-  // ── Deep-link on load: #5 → goTo(4) ────────────────────────────
-  function applyHash() {
-    if (suppressHash) return;
-    const h = parseInt(location.hash.replace('#', ''), 10);
-    if (Number.isFinite(h) && h >= 1 && h <= total) {
-      stage.goTo(h - 1);
-    }
-  }
-  // deck-stage upgrades async; wait one frame so .goTo exists.
-  requestAnimationFrame(() => {
-    applyHash();
-    updateCounter();
+// Auto-print once fonts + layout settle — only when ?print=1 is set,
+// so the file can also be opened for normal browsing/editing.
+if (new URLSearchParams(location.search).has('print')) {
+  window.addEventListener('load', () => {
+    const wait = document.fonts ? document.fonts.ready : Promise.resolve();
+    wait.then(() => setTimeout(() => window.print(), 600));
   });
-  window.addEventListener('hashchange', applyHash);
-
-  // ── Buttons ────────────────────────────────────────────────────
-  btnPrev.addEventListener('click', () => stage.prev());
-  btnNext.addEventListener('click', () => stage.next());
-
-  btnFs.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen?.().catch(() => {});
-    } else {
-      document.exitFullscreen?.();
-    }
-  });
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey) {
-      btnFs.click();
-    }
-  });
-
-  // ── Auto-dim the bar after 3s of inactivity ───────────────────
-  let dimTimer;
-  function poke() {
-    bar.classList.remove('dim');
-    clearTimeout(dimTimer);
-    dimTimer = setTimeout(() => bar.classList.add('dim'), 3000);
-  }
-  ['mousemove', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, poke, { passive: true }));
-  poke();
-
-  // ── First-visit hint ──────────────────────────────────────────
-  const HINT_KEY = 'slaparty_hint_seen_v1';
-  if (!localStorage.getItem(HINT_KEY)) {
-    setTimeout(() => hint.classList.add('show'), 800);
-    setTimeout(() => hint.classList.remove('show'), 5200);
-    setTimeout(() => localStorage.setItem(HINT_KEY, '1'), 5500);
-  }
-})();
+}
 </script>
 
 </body></html>
