@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
-<title>SLAPARTY — Thesis Pitch v2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SLAPARTY — Thesis Pitch</title>
 <template id="__bundler_thumbnail">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <rect width="400" height="400" fill="#0d0b09"/>
@@ -2116,7 +2117,10 @@ html, body { margin: 0; padding: 0; background: #000; }
   <div style="position:absolute; bottom:0; left:0; right:0; height:160px; background:linear-gradient(0deg, rgba(0,0,0,0.88) 0%, transparent 100%); z-index:2;"></div>
   <!-- centered logo -->
   <img src="assets/logo-slaparty.png?v=1" alt="Slaparty" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:62%; max-width:1100px; z-index:3; filter: drop-shadow(0 12px 36px rgba(0,0,0,0.6));">
-  <!-- bottom-right: thesis · name · email — V2 stacked -->
+  <!-- top-right QR -->
+  <div style="position:absolute; top:56px; right:72px; z-index:3; background:#fff; padding:14px; border-radius:6px; box-shadow:0 8px 32px rgba(0,0,0,0.45);">
+    <img src="assets/qr-thanks.jpg" alt="QR" style="width:160px; height:160px; display:block;">
+  </div>  <!-- bottom-right: thesis · name · email — V2 stacked -->
   <div style="position:absolute; bottom:56px; right:72px; z-index:3; text-align:right;">
     <div style="font-family: 'Inter', sans-serif; font-weight:500; font-size:18px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(245,236,255,0.55); margin:0 0 14px 0;">Thesis Pitch</div>
     <div style="font-family: 'Inter', sans-serif; font-weight:700; font-size:44px; letter-spacing:-0.01em; line-height:1; color:#f5ecdf; margin:0 0 14px 0;">Tielong Tangeleih</div>
@@ -2124,7 +2128,136 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
 </section>
 
-<!-- ═══════════════════ 02b VIDEO PLAYBACK (moved before Slap) ═══════════════════ -->
+<!-- ═══════════════════ 05 MYSELF (moved before Video) ═══════════════════ -->
+<section class="slide s-why-single myself" data-screen-label="05 Myself" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="1.2">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">05</div>
+      <hr class="rule">
+      <div class="section-label">// Motivation</div>
+      <div class="chap-title">Why this game, by me.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Reference</span>
+      <span class="v">Personal · played &amp; loved</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Motivation</div>
+    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
+    <div class="why-single-grid">
+      <div class="myself-text">
+        <h2 class="myself-headline">I <span class="pink">love</span> co-op games.</h2>
+        <p class="myself-body">
+</p>
+      </div>
+      <div class="myself-wall" aria-label="co-op games I have loved playing">
+        <figure class="mw-cell mw-1"><img src="assets/coop-nioh3.png" alt="Nioh 3" style="height: 329px"><span class="mw-tag">Nioh 3</span></figure>
+        <figure class="mw-cell mw-2"><img src="assets/coop-lostcastle2.png" alt="Lost Castle 2"><span class="mw-tag">Lost Castle 2</span></figure>
+        <figure class="mw-cell mw-3"><img src="assets/coop-splitfiction.png" alt="Split Fiction"><span class="mw-tag">Split Fiction</span></figure>
+        <figure class="mw-cell mw-4"><img src="assets/coop-ravenswatch.png" alt="Ravenswatch" style="opacity: 1; width: 296px; height: 380px"><span class="mw-tag">Ravenswatch</span></figure>
+        <figure class="mw-cell mw-5"><img src="assets/coop-wow-midnight.png" alt="World of Warcraft: Midnight" style="object-fit: contain; background: #0d0b09;"><span class="mw-tag">WoW · Midnight</span></figure>
+        <figure class="mw-cell mw-6"><img src="assets/coop-windblown.png" alt="Windblown" style="object-fit: fill; width: 309px; height: 289px"><span class="mw-tag">Windblown</span></figure>
+        <figure class="mw-cell mw-7"><img src="assets/coop-remnant2.png" alt="Remnant 2"><span class="mw-tag">Remnant 2</span></figure>
+        <figure class="mw-cell mw-8"><img src="assets/coop-warcraft3-tft.png" alt="Warcraft III: The Frozen Throne"><span class="mw-tag">Warcraft III · TFT</span></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 05.5 LOL HOURS (added after Myself) ═══════════════════ -->
+<style>
+.s-lol-hours {
+  background:
+    linear-gradient(rgba(13,11,9,0.72), rgba(13,11,9,0.72)),
+    url('assets/key-poster-clean.png') center/cover no-repeat,
+    #0d0b09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-lol-hours .lol-pair {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+}
+.s-lol-hours .lol-pair img {
+  display: block;
+  height: 820px;
+  width: auto;
+  border-radius: 18px;
+}
+</style>
+<section class="slide s-lol-hours" data-screen-label="05b LoL Hours" data-om-validate="" data-deck-slide="1.3">
+  <div class="lol-pair">
+    <img src="assets/lol-hours-6374.png" alt="">
+    <img src="assets/lol-hours-4772.png" alt="">
+  </div>
+</section>
+
+<!-- ═══════════════════ 05c REFERENCE GAMES ═══════════════════ -->
+<style>
+.s-ref-games {
+  background:
+    linear-gradient(rgba(13,11,9,0.72), rgba(13,11,9,0.72)),
+    url('assets/key-poster-clean.png') center/cover no-repeat,
+    #0d0b09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.s-ref-games .ref-row {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+.s-ref-games .ref-cell {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  max-width: 540px;
+  gap: 24px;
+}
+.s-ref-games .ref-frame {
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #14100d;
+  box-shadow: 0 28px 60px -12px rgba(0,0,0,0.85);
+}
+.s-ref-games .ref-cell img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.s-ref-games .ref-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #ff8ab5;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+</style>
+<section class="slide s-ref-games" data-screen-label="05c Reference Games" data-om-validate="" data-deck-slide="1.35">
+  <div class="ref-row">
+    <div class="ref-cell"><h2 class="ref-label">Kick</h2><div class="ref-frame"><img src="assets/ref-anger-foot.png" alt=""></div></div>
+    <div class="ref-cell"><h2 class="ref-label">Steal</h2><div class="ref-frame"><img src="assets/ref-bandit-knight.png" alt=""></div></div>
+    <div class="ref-cell"><h2 class="ref-label">Punch</h2><div class="ref-frame"><img src="assets/ref-arms.png" alt=""></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 02b VIDEO PLAYBACK (after Myself) ═══════════════════ -->
 <section class="slide s-video" data-screen-label="02b Video" data-om-validate="" data-deck-slide="1.5">
   <div class="video-stage">
     <iframe class="video-el" src="https://drive.google.com/file/d/14TzjATaUJNlTPfk792vvb4aGknrH04D7/preview" title="Slaparty video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -2200,44 +2333,6 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
 </section>
 
-<!-- ═══════════════════ 05 MYSELF ═══════════════════ -->
-<section class="slide s-why-single myself" data-screen-label="05 Myself" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4">
-  <div class="s-left">
-    <div class="lc-top"></div>
-    <div class="lc-mid">
-      <div class="num">05</div>
-      <hr class="rule">
-      <div class="section-label">// Motivation</div>
-      <div class="chap-title">Why this game, by me.</div>
-    </div>
-    <div class="lc-bot">
-      <span class="k">Reference</span>
-      <span class="v">Personal · played &amp; loved</span>
-    </div>
-  </div>
-  <div class="s-right">
-    <div class="eyebrow">// Motivation</div>
-    <h1 class="slide-title"><span class="pink">SLAP</span></h1>
-    <div class="why-single-grid">
-      <div class="myself-text">
-        <h2 class="myself-headline">I <span class="pink">love</span> co-op games.</h2>
-        <p class="myself-body">
-</p>
-      </div>
-      <div class="myself-wall" aria-label="co-op games I have loved playing">
-        <figure class="mw-cell mw-1"><img src="assets/coop-nioh3.png" alt="Nioh 3" style="height: 329px"><span class="mw-tag">Nioh 3</span></figure>
-        <figure class="mw-cell mw-2"><img src="assets/coop-lostcastle2.png" alt="Lost Castle 2"><span class="mw-tag">Lost Castle 2</span></figure>
-        <figure class="mw-cell mw-3"><img src="assets/coop-splitfiction.png" alt="Split Fiction"><span class="mw-tag">Split Fiction</span></figure>
-        <figure class="mw-cell mw-4"><img src="assets/coop-ravenswatch.png" alt="Ravenswatch" style="opacity: 1; width: 296px; height: 380px"><span class="mw-tag">Ravenswatch</span></figure>
-        <figure class="mw-cell mw-5"><img src="assets/coop-borderlands4.png" alt="Borderlands 4" style="height: 361px"><span class="mw-tag">Borderlands 4</span></figure>
-        <figure class="mw-cell mw-6"><img src="assets/coop-windblown.png" alt="Windblown" style="object-fit: fill; width: 309px; height: 289px"><span class="mw-tag">Windblown</span></figure>
-        <figure class="mw-cell mw-7"><img src="assets/coop-remnant2.png" alt="Remnant 2"><span class="mw-tag">Remnant 2</span></figure>
-        <figure class="mw-cell mw-8"><img src="assets/coop-warcraft3-tft.png" alt="Warcraft III: The Frozen Throne"><span class="mw-tag">Warcraft III · TFT</span></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════ 05.5 HUMILIATION IN CO-OP GAMES (copy) ═══════════════════ -->
 <section class="slide s-why-single coop-humiliation" data-screen-label="05.5 Humiliation in Co-op Games (copy)" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="4.5">
   <div class="s-left">
@@ -2274,7 +2369,7 @@ html, body { margin: 0; padding: 0; background: #000; }
   <div class="bg"></div>
   <div class="q-inner">
     <div class="q-eye">// Thesis Question</div>
-    <div class="q-body">Where's the balance between <span class="hi">humiliation</span> and <span class="hi">play</span> when <span class="hi">slap</span> becomes the core mechanic of a party game<span class="big-q">?</span></div>
+    <div class="q-body">How can <span class="hi">slapping</span> as a game mechanic balance <span class="hi">humiliation</span> and <span class="hi">play</span> in a <span class="hi">co-op</span> game<span class="big-q">?</span></div>
   </div>
 
 </section>
@@ -2304,7 +2399,7 @@ html, body { margin: 0; padding: 0; background: #000; }
         <div class="eyebrow-big">// Thesis Project</div>
         <img class="logo-big" src="assets/logo-slaparty.png?v=1" alt="Slaparty">
         <p class="tagline">
-          A 3D co-op action game where two glitched characters slap their way through a gauntlet built by their own creator, <b>Tielong</b>.
+          A 3D co-op action game where two glitched game characters slap their way through a gauntlet built by their own creator, <b>Tielong</b>.
         </p>
       </div>
       <div class="credits">
@@ -2337,10 +2432,7 @@ html, body { margin: 0; padding: 0; background: #000; }
           Two characters are spawned in a sandbox level by their creator, <span class="pink">Tielong</span>. Suddenly, a bug occurs, and they begin <span class="hi">slapping each other endlessly</span>.
         </p>
         <p class="gn-body">
-          <span class="pink">Tielong</span> never intended this to happen. But to his surprise, he found it interesting. Instead of fixing the bug, he starts to build variety of levels just to see how far this accident could go.
-        </p>
-        <p class="gn-body gn-tail">
-          Players inhabit these two glitched bodies, slapping their way through Tielong's gauntlet.
+          <span class="pink">Tielong</span> never intended this, but he finds it fascinating. Instead of fixing the bug, he begins building a variety of levels to explore how far this accident can go.
         </p>
       </div>
       <div class="game-art">
@@ -2352,62 +2444,15 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
 </section>
 
-<!-- ═══════════════════ 07 WHY SLAPARTY ═══════════════════ -->
-<section class="slide s-why-y" data-screen-label="07 Why Slaparty" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="6">
-  <div class="s-left">
-    <div class="lc-top"></div>
-    <div class="lc-mid">
-      <div class="num">07</div>
-      <hr class="rule">
-      <div class="section-label">// The Y</div>
-      <div class="chap-title">Why this game, not another.</div>
-    </div>
-    <div class="lc-bot">
-      <span class="k">Sales</span>
-      <span class="v">Two pillars · one verb</span>
-    </div>
-  </div>
-  <div class="s-right">
-    <div class="eyebrow">// The Y</div>
-    <h1 class="slide-title">Why you should play <span class="pink">SLAPARTY</span>?</h1>
-
-    <div class="why-y-body">
-      <figure class="wy-cap">
-        <div class="wy-cap-frame">
-          <img src="assets/why-gameplay.gif" alt="Slaparty gameplay loop">
-          <span class="wy-cap-scan"></span>
-        </div>
-      </figure>
-
-      <div class="why-y-stack">
-        <section class="why-col why-col--l">
-          <h2 class="why-col-h">Juicyyyyy Slap</h2>
-          <hr class="why-col-rule">
-          <ul class="why-bullets">
-            <li>Slap-first combat, <em>Power Slap</em> energy</li>
-            <li>Hit-stop, screen shake, particle bursts</li>
-            <li>Anime camera cuts on every clash</li>
-            <li>Charge / Rally / Combo variants</li>
-          </ul>
-        </section>
-
-        <section class="why-col why-col--r">
-          <h2 class="why-col-h">Every Level is a different</h2>
-          <hr class="why-col-rule">
-          <ul class="why-bullets">
-            <li>2-player co-op → 1v1 duel → boss finale</li>
-            <li><em>Smash Bros</em> action grammar</li>
-            <li>A different art world every level</li>
-            <li>Unmistakably a <em>Tielong</em> game</li>
-          </ul>
-      </section>
-    </div>
-
+<!-- ═══════════════════ 07b VIDEO PLAYBACK (moved before Why Slaparty) ═══════════════════ -->
+<section class="slide s-video" data-screen-label="07b Video" data-om-validate="" data-deck-slide="5.8">
+  <div class="video-stage">
+    <iframe class="video-el" src="https://drive.google.com/file/d/17SN3-s732KEzH8rjPv8-AtMHOBboAOHP/preview" title="Slaparty video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </section>
 
-<!-- ═══════════════════ 07 THREE WAYS ═══════════════════ -->
-<section class="slide" data-screen-label="08 Three Ways" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="7">
+<!-- ═══════════════════ 07 THREE WAYS (moved before Why Slaparty) ═══════════════════ -->
+<section class="slide" data-screen-label="08 Three Ways" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="5.9">
   <div class="s-left">
     <div class="lc-top"></div>
     <div class="lc-mid">
@@ -2446,6 +2491,314 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
 </section>
 
+<!-- ═══════════════════ 08b NORMAL SLAP (X-layout) ═══════════════════ -->
+<section class="slide" data-screen-label="08b Normal Slap" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">08b</div>
+      <hr class="rule">
+      <div class="section-label">// Core Mechanic</div>
+      <div class="chap-title">The base beat.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Input</span>
+      <span class="v">tap</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Core Mechanic</div>
+    <h1 class="slide-title"><span class="pink">Normal</span> Slap</h1>
+    <div class="game-layout">
+      <div class="game-narr">
+        <p class="gn-body">
+          A single press, a clean hit.
+        </p>
+        <p class="gn-body">
+
+
+</p>
+        <p class="gn-body gn-tail">
+
+
+</p>
+      </div>
+      <div class="game-art">
+        <div class="game-art-ph">
+          <img class="game-art-img" src="assets/slap-normal.gif" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 08c CHARGED SLAP (X-layout) ═══════════════════ -->
+<section class="slide" data-screen-label="08c Charged Slap" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">08c</div>
+      <hr class="rule">
+      <div class="section-label">// Core Mechanic</div>
+      <div class="chap-title">Hold for the haymaker.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Input</span>
+      <span class="v">hold → release</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Core Mechanic</div>
+    <h1 class="slide-title"><span class="pink">Charged</span> Slap</h1>
+    <div class="game-layout">
+      <div class="game-narr">
+        <p class="gn-body">
+          Partial charge causes medium knockback, while a full charge launches enemies into the air.
+        </p>
+        <p class="gn-body">
+
+</p>
+        <p class="gn-body gn-tail">
+
+
+</p>
+      </div>
+      <div class="game-art">
+        <div class="game-art-ph">
+          <img class="game-art-img" src="assets/slap-charged.gif" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 08d RALLY SLAP (X-layout) ═══════════════════ -->
+<section class="slide" data-screen-label="08d Rally Slap" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">08d</div>
+      <hr class="rule">
+      <div class="section-label">// Core Mechanic</div>
+      <div class="chap-title">A duet, not a duel.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Input</span>
+      <span class="v">return ↻</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Core Mechanic</div>
+    <h1 class="slide-title"><span class="pink">Rally</span> Slap</h1>
+    <div class="game-layout">
+      <div class="game-narr">
+        <p class="gn-body">
+          Usable when the boss is stunned. Two players volley the boss back and forth like a ping-pong ball. The progress bar advances through continuous slapping. The winner smashes the boss toward the losing player.
+        </p>
+        <p class="gn-body">
+
+</p>
+        <p class="gn-body gn-tail">
+
+
+</p>
+      </div>
+      <div class="game-art">
+        <div class="game-art-ph">
+          <img class="game-art-img" src="assets/slap-rallygif.gif" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 07 WHY SLAPARTY (moved after Rally Slap) ═══════════════════ -->
+<section class="slide s-why-y" data-screen-label="07 Why Slaparty" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">07</div>
+      <hr class="rule">
+      <div class="section-label">// The Y</div>
+      <div class="chap-title">Why this game, not another.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Sales</span>
+      <span class="v">Two pillars · one verb</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// The Y</div>
+    <h1 class="slide-title">Disruption, Scoring, and <span class="pink">Consequence</span></h1>
+
+    <div class="why-y-body">
+      <figure class="wy-cap">
+        <div class="wy-cap-frame">
+          <img src="assets/why-gameplay.gif" alt="Slaparty gameplay loop">
+          <span class="wy-cap-scan"></span>
+        </div>
+      </figure>
+
+      <div class="why-y-stack">
+        <section class="why-col why-col--l">
+          <h2 class="why-col-h">Slap as Disruption</h2>
+          <hr class="why-col-rule">
+          <ul class="why-bullets">
+            <li>Slap to <em>interfere</em> with other players</li>
+            <li>Creates tension within co-op play</li>
+          </ul>
+        </section>
+
+        <section class="why-col why-col--r">
+          <h2 class="why-col-h">Scoring &amp; Consequence</h2>
+          <hr class="why-col-rule">
+          <ul class="why-bullets">
+            <li>Performance-based scoring per level</li>
+            <li><em>Winners</em> are recorded</li>
+            <li>Results shape the <em>final outcome</em></li>
+          </ul>
+      </section>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ 07b LEVEL FLOW ═══════════════════ -->
+<section class="slide s-flow" data-screen-label="07b Level Flow" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <style>
+    .s-flow .flow-wrap{
+      width:100%;
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 8px 8px;
+    }
+    .s-flow .flow-svg{
+      width:100%;
+      height:auto;
+      max-height:560px;
+      overflow:visible;
+    }
+    .s-flow .flow-node-bg{
+      fill: rgba(13,11,9,0.92);
+      stroke: var(--pink, #ff5fa2);
+      stroke-width: 2.5;
+    }
+    .s-flow .flow-node-bg.is-end{
+      fill: var(--pink, #ff5fa2);
+      stroke: var(--pink, #ff5fa2);
+    }
+    .s-flow .flow-node-label{
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.02em;
+      fill: #f4ebd8;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .s-flow .flow-node-bg.is-end + .flow-node-label,
+    .s-flow .flow-node-bg.is-end ~ .flow-node-label{
+      fill: #0d0b09;
+    }
+    .s-flow .flow-node-sub{
+      font-family: 'JetBrains Mono', 'Inter', monospace;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      fill: rgba(244,235,216,0.55);
+      text-anchor: middle;
+    }
+    .s-flow .flow-node-sub.is-end{
+      fill: rgba(13,11,9,0.78);
+    }
+    .s-flow .flow-arrow{
+      stroke: rgba(244,235,216,0.55);
+      stroke-width: 2;
+      fill: none;
+    }
+    .s-flow .flow-arrow.is-branch{
+      stroke: var(--pink, #ff5fa2);
+      stroke-width: 2.5;
+    }
+    .s-flow .flow-arrow-head{
+      fill: rgba(244,235,216,0.65);
+    }
+    .s-flow .flow-arrow-head.is-branch{
+      fill: var(--pink, #ff5fa2);
+    }
+    .s-flow .flow-tag{
+      font-family: 'JetBrains Mono', 'Inter', monospace;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      fill: rgba(244,235,216,0.4);
+    }
+  </style>
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">07b</div>
+      <hr class="rule">
+      <div class="section-label">// Level Flow</div>
+      <div class="chap-title">A linear ramp, a branching end.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Structure</span>
+      <span class="v">3 levels · 2 endings</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Level Flow</div>
+    <h1 class="slide-title">The Branching <span class="pink">Path</span></h1>
+
+    <div class="flow-wrap">
+      <svg class="flow-svg" viewBox="0 0 1100 460" preserveAspectRatio="xMidYMid meet" aria-label="Slaparty level flow diagram">
+        <defs>
+          <marker id="flow-arrow-end" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="flow-arrow-head" />
+          </marker>
+          <marker id="flow-arrow-end-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="flow-arrow-head is-branch" />
+          </marker>
+        </defs>
+
+        <!-- Connector lines (drawn first so circles cover endpoints) -->
+        <line class="flow-arrow" x1="160" y1="230" x2="335" y2="230" marker-end="url(#flow-arrow-end)" />
+        <line class="flow-arrow" x1="465" y1="230" x2="640" y2="230" marker-end="url(#flow-arrow-end)" />
+        <line class="flow-arrow is-branch" x1="770" y1="200" x2="900" y2="115" marker-end="url(#flow-arrow-end-pink)" />
+        <line class="flow-arrow is-branch" x1="770" y1="260" x2="900" y2="345" marker-end="url(#flow-arrow-end-pink)" />
+
+        <!-- Node 1 : Level A -->
+        <circle class="flow-node-bg" cx="98" cy="230" r="62" />
+        <text class="flow-node-label" x="98" y="222">Level A</text>
+        <text class="flow-node-sub" x="98" y="248">Slap + Bomb</text>
+
+        <!-- Node 2 : Level B -->
+        <circle class="flow-node-bg" cx="400" cy="230" r="62" />
+        <text class="flow-node-label" x="400" y="235">Level B</text>
+
+        <!-- Node 3 : Level 3 -->
+        <circle class="flow-node-bg" cx="705" cy="230" r="62" />
+        <text class="flow-node-label" x="705" y="235">Level C</text>
+
+        <!-- Node 4-a : PVP ending -->
+        <circle class="flow-node-bg is-end" cx="960" cy="100" r="62" />
+        <text class="flow-node-label" x="960" y="92" style="fill:#0d0b09">Level D-1</text>
+        <text class="flow-node-sub is-end" x="960" y="118">PVP</text>
+
+        <!-- Node 4-b : PVE ending -->
+        <circle class="flow-node-bg is-end" cx="960" cy="360" r="62" />
+        <text class="flow-node-label" x="960" y="352" style="fill:#0d0b09">Level D-2</text>
+        <text class="flow-node-sub is-end" x="960" y="378">PVE</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════ 08 AUDIENCE ═══════════════════ -->
 <section class="slide" data-screen-label="09 Audience" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="8">
   <div class="s-left">
@@ -2467,9 +2820,9 @@ html, body { margin: 0; padding: 0; background: #000; }
     <div class="aud-grid">
       <div class="aud-meta">
         <div class="aud-row"><div class="k">Primary</div><div class="v">USC Games Expo attendees. My peers.</div></div>
-        <div class="aud-row"><div class="k">Context</div><div class="v">Local, 2-player, action,action</div></div>
-        <div class="aud-row"><div class="k">Session</div><div class="v">~25 minutes per run.</div></div>
-        <div class="aud-row"><div class="k">Mode</div><div class="v">Co-op, controllers.</div></div>
+        <div class="aud-row"><div class="k">Context</div><div class="v">Local, 2-player, action</div></div>
+        <div class="aud-row"><div class="k">Session</div><div class="v">~30 minutes per run.</div></div>
+        <div class="aud-row"><div class="k">Mode</div><div class="v">Co-op</div></div>
       </div>
     </div>
   </div>
@@ -2492,7 +2845,8 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
   <div class="s-right">
     <div class="eyebrow">// Art Direction</div>
-    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">it looks like</span></h1>
+    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">Character looks like - 1
+</span></h1>
     <p class="art-sub">
 </p>
     <div class="art-grid">
@@ -2500,7 +2854,7 @@ html, body { margin: 0; padding: 0; background: #000; }
         <div class="art-card cy">
           <img class="art-img" src="assets/art-characters.jpg" alt="" onerror="this.style.display='none'">
         </div>
-        <div class="art-label"><span class="lv">01</span><span class="nm">Character </span></div>
+        <div class="art-label"><span class="lv">01</span><span class="nm">Character(WIP)</span></div>
       </div>
       <div class="art-item">
         <div class="art-card an">
@@ -2512,13 +2866,50 @@ html, body { margin: 0; padding: 0; background: #000; }
         <div class="art-card ki">
           <img class="art-img" src="assets/art-slap.gif" alt="" onerror="this.style.display='none'" style="object-position: 60% center">
         </div>
-        <div class="art-label"><span class="lv">03</span><span class="nm">Slap</span></div>
+        <div class="art-label"><span class="lv">03</span><span class="nm">Slap (WIP)</span></div>
       </div>
       <div class="art-item">
         <div class="art-card an">
           <img class="art-img" src="assets/art-slap-impact.gif" alt="" onerror="this.style.display='none'" style="object-fit: contain; padding: 0px; transform: scaleX(-1)">
         </div>
         <div class="art-label"><span class="lv">04</span><span class="nm"> Being slapped</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ 10a CHARACTER LOOKS LIKE - 2 ═══════════════════ -->
+<section class="slide" data-screen-label="10a Character looks like 2" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text">
+  <div class="s-left">
+    <div class="lc-top"></div>
+    <div class="lc-mid">
+      <div class="num">10</div>
+      <hr class="rule">
+      <div class="section-label">// Art Direction</div>
+      <div class="chap-title">Different skins, same bones.</div>
+    </div>
+    <div class="lc-bot">
+      <span class="k">Ref</span>
+      <span class="v">It Takes Two</span>
+    </div>
+  </div>
+  <div class="s-right">
+    <div class="eyebrow">// Art Direction</div>
+    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">Character looks like - 2</span></h1>
+    <p class="art-sub">
+</p>
+    <div class="art-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1100px; gap: 56px;">
+      <div class="art-item">
+        <div class="art-card cy" style="height: 560px; aspect-ratio: 4 / 5; max-width: 520px; margin: 0 auto;">
+          <img class="art-img" src="assets/art-rally.gif" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="art-label"><span class="lv">05</span><span class="nm">Rally</span></div>
+      </div>
+      <div class="art-item">
+        <div class="art-card an" style="height: 560px; aspect-ratio: 4 / 5; max-width: 520px; margin: 0 auto;">
+          <img class="art-img" src="assets/art-run.gif" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="art-label"><span class="lv">06</span><span class="nm">Run</span></div>
       </div>
     </div>
   </div>
@@ -2541,33 +2932,21 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
   <div class="s-right">
     <div class="eyebrow">// Art Direction</div>
-    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">it looks like</span></h1>
+    <h1 class="slide-title" style="font-size: 72px;"><span class="pink">Levels looks like</span></h1>
     <p class="art-sub">
 </p>
-    <div class="art-grid">
+        <div class="art-grid" style="grid-template-columns: repeat(2, 1fr); gap: 64px; place-items: stretch;">
       <div class="art-item">
-        <div class="art-card cy">
+        <div class="art-card cy" style="height: 600px; aspect-ratio: auto; max-width: none; margin: 0;">
           <img class="art-img" src="assets/art-level.png" alt="" onerror="this.style.display='none'">
         </div>
-        <div class="art-label"><span class="lv">05</span><span class="nm">Levels</span></div>
+        <div class="art-label"><span class="lv">05</span><span class="nm">LEVEL A (WIP）</span></div>
       </div>
       <div class="art-item">
-        <div class="art-card an">
-          <img class="art-img" src="assets/art-charge.gif" alt="" onerror="this.style.display='none'">
+        <div class="art-card an" style="height: 600px; aspect-ratio: auto; max-width: none; margin: 0;">
+          <img class="art-img" src="assets/art-level-b.png" alt="" onerror="this.style.display='none'">
         </div>
-        <div class="art-label"><span class="lv">06</span><span class="nm">Levels</span></div>
-      </div>
-      <div class="art-item">
-        <div class="art-card ki">
-          <img class="art-img" src="assets/art-slap.gif" alt="" onerror="this.style.display='none'" style="object-position: 60% center">
-        </div>
-        <div class="art-label"><span class="lv">07</span><span class="nm">Levels</span></div>
-      </div>
-      <div class="art-item">
-        <div class="art-card an">
-          <img class="art-img" src="assets/art-slap-impact.gif" alt="" onerror="this.style.display='none'" style="object-fit: contain; padding: 0px; transform: scaleX(-1)">
-        </div>
-        <div class="art-label"><span class="lv">08</span><span class="nm">Levels</span></div>
+        <div class="art-label"><span class="lv">06</span><span class="nm">LEVEL B </span></div>
       </div>
     </div>
   </div>
@@ -2590,25 +2969,30 @@ html, body { margin: 0; padding: 0; background: #000; }
   </div>
   <div class="s-right">
     <div class="eyebrow">// Team</div>
-    <h1 class="slide-title">Small <span class="pink">crew</span>. Big <span class="pink">stack</span>.</h1>
+    <h1 class="slide-title">
+</h1>
     <div class="team-grid">
       <div class="team-item">
         <div class="team-col">
-          <div class="team-num">1</div>
+          <div class="team-num" style="font-size: 80px; line-height: 1; margin-bottom: 28px;">Myself</div>
           <ul class="team-list">
-            <li><span class="what">Design</span><span class="role">Systems &amp; Levels</span></li>
-            <li><span class="what">Programming</span><span class="role">Gameplay &amp; Tools</span></li>
-            <li><span class="what">Narrative</span><span class="role">Tielong / Subjects</span></li>
+            <li><span class="what">Design</span><span class="role">
+</span></li>
+            <li><span class="what">Programming</span><span class="role">
+</span></li>
+            <li><span class="what">Narrative</span><span class="role">
+</span></li>
           </ul>
         </div>
 
       </div>
       <div class="team-item">
         <div class="team-col">
-          <div class="team-num">3</div>
+          <div class="team-num" style="font-size: 80px; line-height: 1; margin-bottom: 28px;">Tools</div>
           <ul class="team-list">
-            <li><span class="what">GPT</span><span class="role">Systems design</span></li>
-            <li><span class="what">Claude Opus</span><span class="role">Content · iteration · code</span></li>
+            <li><span class="what">Cursor &amp; Claude Code &amp; Codex</span><span class="role">GPT IMAGE-2 &amp; OPUS &amp; GPT5.5</span></li>
+            <li><span class="what">Unity</span><span class="role">
+</span></li>
             <li><span class="what">Custom Agent</span><span class="role">Project producer — in dev</span></li>
           </ul>
         </div>
@@ -2616,10 +3000,13 @@ html, body { margin: 0; padding: 0; background: #000; }
       </div>
       <div class="team-item">
         <div class="team-col">
-          <div class="team-num">2</div>
+          <div class="team-num" style="font-size: 80px; line-height: 1; margin-bottom: 28px;">Art</div>
           <ul class="team-list">
-            <li><span class="what">Outsourced Art</span><span class="role">Per-level contractors</span></li>
-            <li><span class="what">Mark Bolas</span><span class="role">Faculty advisor</span></li>
+            <li><span class="what">Outsourcer</span><span class="role">
+</span></li>
+            <li><span class="what">
+</span><span class="role">
+</span></li>
           </ul>
         </div>
 
@@ -2648,40 +3035,210 @@ html, body { margin: 0; padding: 0; background: #000; }
     </div>
   </div>
   <div class="s-right">
+    <style>
+      .s-right .pp-roadmap{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+      }
+      .s-right .pp-headers{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: end;
+        margin-bottom: 22px;
+      }
+      .s-right .pp-head{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-right: 32px;
+      }
+      .s-right .pp-head .pp-name{
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        color: #f4ebd8;
+      }
+      .s-right .pp-head.is-hot .pp-name{
+        color: var(--pink, #ff5fa2);
+      }
+
+      .s-right .pp-rule{
+        position: relative;
+        height: 1px;
+        background: rgba(244,235,216,0.18);
+        margin-bottom: 22px;
+      }
+      .s-right .pp-rule .tick{
+        position: absolute;
+        top: -5px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: #0d0b09;
+        border: 1.5px solid rgba(244,235,216,0.5);
+      }
+      .s-right .pp-rule .tick.t1{ left: 0; }
+      .s-right .pp-rule .tick.t2{ left: 33.33%; transform: translateX(-50%); }
+      .s-right .pp-rule .tick.t3{ left: 66.66%; transform: translateX(-50%); }
+      .s-right .pp-rule .tick.t4{ right: 0; }
+      .s-right .pp-rule .tick.is-hot{
+        background: var(--pink, #ff5fa2);
+        border-color: var(--pink, #ff5fa2);
+      }
+
+      .s-right .pp-months{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -16px;
+        margin-bottom: 72px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 0.04em;
+        color: rgba(244,235,216,0.85);
+        position: relative;
+      }
+      .s-right .pp-months .m{
+        position: relative;
+      }
+      .s-right .pp-months .m.start::before{
+        content: attr(data-start);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .s-right .pp-months .m::after{
+        content: attr(data-end);
+        position: absolute;
+        right: -1px;
+        top: 0;
+        transform: translateX(50%);
+      }
+      .s-right .pp-months .m:last-child::after{
+        right: 0;
+        transform: none;
+      }
+
+      .s-right .pp-cols{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        flex: 1;
+      }
+      .s-right .pp-col{
+        padding: 0 32px 0 0;
+      }
+      .s-right .pp-col + .pp-col{
+        padding-left: 32px;
+        border-left: 1px solid rgba(244,235,216,0.12);
+      }
+      .s-right .pp-list{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .s-right .pp-list li{
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.4;
+        color: rgba(244,235,216,0.92);
+        position: relative;
+        padding-left: 18px;
+      }
+      .s-right .pp-list li::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 6px;
+        height: 1px;
+        background: rgba(244,235,216,0.45);
+      }
+      .s-right .pp-col.is-hot .pp-list li::before{
+        background: var(--pink, #ff5fa2);
+      }
+
+      .s-right .pp-foot{
+        margin-top: 48px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(244,235,216,0.12);
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.02em;
+        color: rgba(244,235,216,0.65);
+      }
+      .s-right .pp-foot .ask{
+        color: var(--pink, #ff5fa2);
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    </style>
+
     <div class="eyebrow">// Production Plan</div>
-    <h1 class="slide-title">Polish over <span class="pink">volume</span>.</h1>
-    <div class="polish-bar">
-      <div class="seg content"><span>Content — 6 months</span><span>50%</span></div>
-      <div class="seg polish"><span>Polish — 6 months</span><span>50%</span></div>
-    </div>
-    <div class="polish-pull">
-      "Party games live or die on <span class="pink">feel</span>, not feature count. Slap has to be juicy the <span class="pink">500<sup style="font-size:0.6em;">th</sup></span> time, not just the 1<sup style="font-size:0.6em;">st</sup>."
-    </div>
-    <div class="roadmap">
-      <div class="rm hi">
-        <div class="when">Now — Apr 2026</div>
-        <div class="what">Level A art<br>complete</div>
-        <div class="note">✓ Ready to integrate</div>
+    <h1 class="slide-title"><span class="pink">SLAPARTY</span> Roadmap</h1>
+
+    <div class="pp-roadmap">
+      <!-- Phase headers -->
+      <div class="pp-headers">
+        <div class="pp-head is-hot">
+          <div class="pp-name">Pre-Production</div>
+        </div>
+        <div class="pp-head">
+          <div class="pp-name">Alpha Production</div>
+        </div>
+        <div class="pp-head">
+          <div class="pp-name">Beta &amp; Post Production</div>
+        </div>
       </div>
-      <div class="rm">
-        <div class="when">Summer 2026</div>
-        <div class="what">A polish<br>+ B-1 / B-2 / C</div>
-        <div class="note">~5 weeks per level</div>
+
+      <!-- Timeline rule -->
+      <div class="pp-rule">
+        <span class="tick t1 is-hot"></span>
+        <span class="tick t2"></span>
+        <span class="tick t3"></span>
+        <span class="tick t4"></span>
       </div>
-      <div class="rm">
-        <div class="when">Fall 26 — Spring 27</div>
-        <div class="what">Endings +<br>6 mo polish</div>
-        <div class="note">PvP · PvE · juice · playtest</div>
+
+      <!-- Months -->
+      <div class="pp-months">
+        <div class="m start" data-start="May '26" data-end="Sept '26"></div>
+        <div class="m" data-end="Dec '26"></div>
+        <div class="m" data-end="May '27"></div>
       </div>
-      <div class="rm hi">
-        <div class="when">May 2027</div>
-        <div class="what">USC Games<br>Expo</div>
-        <div class="note">Ship</div>
+
+      <!-- Phase content -->
+      <div class="pp-cols">
+        <div class="pp-col is-hot">
+          <ul class="pp-list">
+            <li>Level A &amp; B fully polished</li>
+            <li>Character fully polished</li>
+          </ul>
+        </div>
+        <div class="pp-col">
+          <ul class="pp-list">
+            <li>Level C &amp; D fully polished</li>
+            <li>Playtest</li>
+            <li>Wintershow</li>
+          </ul>
+        </div>
+        <div class="pp-col">
+          <ul class="pp-list">
+            <li>All content complete &amp; polished</li>
+            <li>Playtest</li>
+            <li>Thesis Show</li>
+            <li>USC Games Expo</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="ask-row">
-      <div class="k">The ask →</div>
-      <div class="v">Feedback on the thesis framing. Green light to start production.</div>
+
     </div>
   </div>
 </section>
@@ -2690,10 +3247,7 @@ html, body { margin: 0; padding: 0; background: #000; }
 <section class="slide s-end" data-screen-label="13 Thank You" data-om-validate="no_overflowing_text,no_overlapping_text,slide_sized_text" data-deck-slide="12">
   <div class="bg"></div>
   <div class="inner">
-    <div class="thanks" style="font-family: Inter; text-align: center; line-height: 1.05; letter-spacing: -4.4px; width: 1614px; opacity: 1; height: 326px; font-size: 151px;">
-      Thank you for<br>
-      not <span class="pink">slapping</span> me.
-    </div>
+    <div class="thanks" style="font-family: Inter; text-align: center; line-height: 3.5; letter-spacing: -4.4px; width: 1688px; opacity: 1; font-size: 214px; font-weight: 800; color: #f4ebd8; text-shadow: 0 4px 40px rgba(0,0,0,0.6); padding-top: 40px">Thank You<span style="color: var(--pink, #ff5fa2);"> !</span></div>
     <div class="foot">
       <div class="contact">
         <b>Tielong Tangeleih</b> — tangelei@usc.edu<br>
@@ -2702,43 +3256,167 @@ html, body { margin: 0; padding: 0; background: #000; }
         <br>
       </div>
     </div>
+    <div style="position:absolute; right: 64px; bottom: 64px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+      <div style="background: #fff; padding: 14px; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.45);">
+        <img src="assets/qr-thanks.jpg" alt="QR" style="width: 180px; height: 180px; display: block;">
+      </div>
+    </div>
   </div>
 </section>
 
 </deck-stage>
 
-<style>
-.__fs-btn{position:fixed;right:16px;bottom:16px;z-index:9999;width:36px;height:36px;border:none;border-radius:8px;background:rgba(0,0,0,0.55);color:#fff;font:18px/1 system-ui,sans-serif;cursor:pointer;opacity:.45;transition:opacity .2s}
-.__fs-btn:hover{opacity:1}
-@media print{.__fs-btn{display:none!important}}
-</style>
-<script>
-// Fullscreen: press F or click the ⛶ button.
-(() => {
-  const toggle = () => {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.().catch(() => {});
-    else document.exitFullscreen?.();
-  };
-  document.addEventListener('keydown', (e) => {
-    if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey && !e.altKey) toggle();
-  });
-  const btn = document.createElement('button');
-  btn.className = '__fs-btn';
-  btn.textContent = '⛶';
-  btn.title = 'Fullscreen (F)';
-  btn.setAttribute('aria-label', 'Toggle fullscreen');
-  btn.addEventListener('click', toggle);
-  document.body.appendChild(btn);
-})();
 
-// Auto-print once fonts + layout settle — only when ?print=1 is set,
-// so the file can also be opened for normal browsing/editing.
-if (new URLSearchParams(location.search).has('print')) {
-  window.addEventListener('load', () => {
-    const wait = document.fonts ? document.fonts.ready : Promise.resolve();
-    wait.then(() => setTimeout(() => window.print(), 600));
+
+<!-- ═══════════════════ Web overlay UI (floating controls) ═══════════════════ -->
+<style>
+  .web-ui { position: fixed; z-index: 9999; font-family: 'JetBrains Mono', monospace; color: #e8e2d4; pointer-events: none; }
+  .web-ui button { pointer-events: auto; cursor: pointer; }
+  .web-ui .bar {
+    position: fixed; right: 18px; bottom: 18px;
+    display: flex; gap: 8px; align-items: center;
+    background: rgba(13,11,9,0.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(232,226,212,0.18);
+    padding: 8px 10px; border-radius: 999px;
+    pointer-events: auto;
+    transition: opacity .25s ease;
+  }
+  .web-ui .bar.dim { opacity: 0.18; }
+  .web-ui .bar.dim:hover { opacity: 1; }
+  .web-ui .btn {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: transparent; border: 1px solid rgba(232,226,212,0.22);
+    color: #e8e2d4; font-size: 16px; line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: all .15s ease;
+  }
+  .web-ui .btn:hover { background: rgba(255,138,181,0.14); border-color: rgba(255,138,181,0.5); color: #ff8ab5; }
+  .web-ui .btn:active { transform: scale(0.94); }
+  .web-ui .counter {
+    font-size: 12px; letter-spacing: 0.18em; padding: 0 10px;
+    color: rgba(232,226,212,0.78); white-space: nowrap; user-select: none;
+    min-width: 56px; text-align: center;
+  }
+  .web-ui .counter b { color: #ff8ab5; font-weight: 700; }
+  .web-ui .hint {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+    background: rgba(13,11,9,0.85); border: 1px solid rgba(255,138,181,0.4);
+    color: #e8e2d4; padding: 10px 18px; border-radius: 999px;
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0; transition: opacity .4s ease;
+  }
+  .web-ui .hint.show { opacity: 1; }
+  .web-ui .hint .key {
+    display: inline-block; padding: 2px 7px; margin: 0 2px;
+    border: 1px solid rgba(232,226,212,0.4); border-radius: 4px;
+    font-size: 11px; color: #fff;
+  }
+  .web-ui .hint .pink { color: #ff8ab5; }
+  @media (max-width: 720px) {
+    .web-ui .bar { right: 10px; bottom: 10px; padding: 6px 8px; }
+    .web-ui .btn { width: 44px; height: 44px; font-size: 18px; }
+    .web-ui .counter { font-size: 11px; min-width: 48px; }
+    .web-ui .hint { font-size: 10px; padding: 8px 12px; bottom: 78px; }
+  }
+</style>
+
+<div class="web-ui">
+  <div class="hint" id="web-hint">
+    <span class="key">←</span><span class="key">→</span>
+    <span style="margin: 0 6px; opacity: 0.6;">or</span>
+    <span class="pink">tap left / right</span>
+    <span style="margin: 0 6px; opacity: 0.6;">to navigate</span>
+  </div>
+
+  <div class="bar" id="web-bar">
+    <button class="btn" id="btn-prev" title="Previous (←)" aria-label="Previous slide">‹</button>
+    <div class="counter" id="counter"><b>1</b> / 25</div>
+    <button class="btn" id="btn-next" title="Next (→)" aria-label="Next slide">›</button>
+    <button class="btn" id="btn-fs" title="Toggle fullscreen (F)" aria-label="Fullscreen" style="margin-left: 4px;">⛶</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  const stage = document.querySelector('deck-stage');
+  if (!stage) return;
+
+  const counter = document.getElementById('counter');
+  const bar = document.getElementById('web-bar');
+  const hint = document.getElementById('web-hint');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const btnFs = document.getElementById('btn-fs');
+
+  const slides = stage.querySelectorAll(':scope > section.slide');
+  const total = slides.length;
+
+  // ── Counter, driven by deck-stage's own state ──────────────────
+  let suppressHash = false;
+  function updateCounter() {
+    const n = (stage.index ?? 0) + 1;
+    counter.innerHTML = `<b>${n}</b> / ${total}`;
+    // Keep URL hash in sync for deep-linking, without triggering our hashchange handler
+    suppressHash = true;
+    if (location.hash !== '#' + n) {
+      history.replaceState(null, '', '#' + n);
+    }
+    setTimeout(() => { suppressHash = false; }, 0);
+  }
+  stage.addEventListener('slidechange', updateCounter);
+
+  // ── Deep-link on load: #5 → goTo(4) ────────────────────────────
+  function applyHash() {
+    if (suppressHash) return;
+    const h = parseInt(location.hash.replace('#', ''), 10);
+    if (Number.isFinite(h) && h >= 1 && h <= total) {
+      stage.goTo(h - 1);
+    }
+  }
+  // deck-stage upgrades async; wait one frame so .goTo exists.
+  requestAnimationFrame(() => {
+    applyHash();
+    updateCounter();
   });
-}
+  window.addEventListener('hashchange', applyHash);
+
+  // ── Buttons ────────────────────────────────────────────────────
+  btnPrev.addEventListener('click', () => stage.prev());
+  btnNext.addEventListener('click', () => stage.next());
+
+  btnFs.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen?.().catch(() => {});
+    } else {
+      document.exitFullscreen?.();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey) {
+      btnFs.click();
+    }
+  });
+
+  // ── Auto-dim the bar after 3s of inactivity ───────────────────
+  let dimTimer;
+  function poke() {
+    bar.classList.remove('dim');
+    clearTimeout(dimTimer);
+    dimTimer = setTimeout(() => bar.classList.add('dim'), 3000);
+  }
+  ['mousemove', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, poke, { passive: true }));
+  poke();
+
+  // ── First-visit hint ──────────────────────────────────────────
+  const HINT_KEY = 'slaparty_hint_seen_v1';
+  if (!localStorage.getItem(HINT_KEY)) {
+    setTimeout(() => hint.classList.add('show'), 800);
+    setTimeout(() => hint.classList.remove('show'), 5200);
+    setTimeout(() => localStorage.setItem(HINT_KEY, '1'), 5500);
+  }
+})();
 </script>
+
 
 </body></html>

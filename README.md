@@ -11,6 +11,7 @@ This folder is a self‑contained web deck: one HTML file + assets. Open `index.
 Just double‑click `index.html` — it works as a static file. Or serve it:
 
 ```bash
+cd web
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
